@@ -1,0 +1,7870 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Elevate | Luxury Fashion</title>
+
+
+  <!-- ===================================================== -->
+  <!-- GOOGLE FONTS -->
+  <!-- ===================================================== -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Urbanist:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+
+  <!-- ===================================================== -->
+  <!-- TAILWIND CDN -->
+  <!-- ===================================================== -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+
+          fontFamily: {
+            cormorant: ['Cormorant', 'serif'],
+            cormorantGaramond: ['Cormorant Garamond', 'serif'],
+            urbanist: ['Urbanist', 'sans-serif'],
+          },
+
+          colors: {
+
+            bark: '#16090D',
+
+            panel: '#141F1A',
+
+            card: '#16090D',
+
+            gold: {
+              light: '#F6D995',
+              DEFAULT: '#C9A24B',
+              dark: '#AB8546',
+            },
+
+            hairline: '#FFF3F71A',
+
+          },
+
+          letterSpacing: {
+            widest2: '0.25em',
+          },
+
+          screens: {
+            xs: '375px',
+          },
+
+        },
+      },
+    };
+  </script>
+
+
+  <!-- ===================================================== -->
+  <!-- RESPONSIVE OVERRIDES -->
+  <!-- ===================================================== -->
+
+  <style>
+
+    /* =====================================================
+       GLOBAL
+    ===================================================== */
+
+    html {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      overflow-x: hidden;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    img,
+    svg {
+      max-width: 100%;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+
+    /* =====================================================
+       GOLD GRADIENT
+    ===================================================== */
+
+    .gold-gradient {
+      background: linear-gradient(
+        135deg,
+        #F6D995 0%,
+        #C9A24B 55%,
+        #AB8546 100%
+      );
+    }
+
+
+    /* =====================================================
+       LOGO FONT
+    ===================================================== */
+
+    .elevate-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+    }
+
+
+    /* =====================================================
+       COLLECTION SECTION
+    ===================================================== */
+
+    .gold-gradient-text {
+      background: radial-gradient(
+        50% 261.22% at 50% 50%,
+        #F6D995 0%,
+        #AB8546 100%
+      );
+
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .gold-gradient-bg {
+      background: radial-gradient(
+        50% 261.22% at 50% 50%,
+        #F6D995 0%,
+        #AB8546 100%
+      );
+    }
+
+    .card-frame {
+      background-color: rgba(255, 243, 247, 0.06);
+      border: 1px solid rgba(255, 243, 247, 0.10);
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+
+    /* =====================================================
+       MARQUEE
+    ===================================================== */
+
+    @keyframes marquee {
+
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+
+    }
+
+    .marquee-track {
+      animation: marquee 22s linear infinite;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .marquee-track {
+        animation: none;
+      }
+
+    }
+
+
+    /* =====================================================
+       0 - 399px
+    ===================================================== */
+
+    @media (max-width: 399px) {
+
+      .top-strip-wrapper {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+      }
+
+      .top-strip-font {
+        font-size: 9px !important;
+      }
+
+      #announcement-text {
+        max-width: 145px !important;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .main-header-grid {
+        width: 100%;
+      }
+
+      .desktop-logo {
+        padding: 12px 12px !important;
+        min-height: 72px;
+      }
+
+      .desktop-logo img {
+        width: 135px !important;
+        max-width: 135px !important;
+      }
+
+      .desktop-logo > div {
+        gap: 8px;
+      }
+
+      #mobile-search-btn svg,
+      #cart-btn-mobile svg {
+        width: 19px !important;
+        height: 19px !important;
+      }
+
+      #hamburger-btn {
+        width: 21px !important;
+        height: 21px !important;
+      }
+
+      .desktop-feature-row {
+        grid-template-columns: 1fr !important;
+      }
+
+      .desktop-feature-row > div {
+        min-height: 40px !important;
+        border-right: 0 !important;
+      }
+
+      .desktop-feature-row > div:last-child {
+        border-bottom: 0 !important;
+      }
+
+      .desktop-feature-row span {
+        font-size: 10px !important;
+      }
+
+      .desktop-feature-row img {
+        width: 15px !important;
+        height: 15px !important;
+      }
+
+      #mobile-menu {
+        width: 92% !important;
+      }
+
+      #mobile-menu nav {
+        gap: 18px !important;
+      }
+
+      #mobile-menu form button {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+      }
+
+      #mobile-menu form input {
+        min-width: 0;
+      }
+
+    }
+
+
+    /* =====================================================
+       400 - 639px
+    ===================================================== */
+
+    @media (min-width: 400px) and (max-width: 639px) {
+
+      .desktop-feature-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      }
+
+      .desktop-feature-row > div:nth-child(2n) {
+        border-right: 0 !important;
+      }
+
+      .desktop-feature-row > div:nth-child(3),
+      .desktop-feature-row > div:nth-child(4) {
+        border-bottom: 1px solid rgba(255,255,255,.1) !important;
+      }
+
+      .desktop-logo {
+        min-height: 76px;
+      }
+
+      .desktop-logo img {
+        width: 150px !important;
+      }
+
+      #mobile-menu {
+        width: 88% !important;
+      }
+
+    }
+
+
+    /* =====================================================
+       640 - 767px
+    ===================================================== */
+
+    @media (min-width: 640px) and (max-width: 767px) {
+
+      .desktop-logo {
+        min-height: 82px;
+      }
+
+      .desktop-logo img {
+        width: 180px !important;
+      }
+
+      .desktop-feature-row {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+      }
+
+      .desktop-feature-row > div:nth-child(3n) {
+        border-right: 0 !important;
+      }
+
+      .desktop-feature-row > div {
+        min-height: 44px !important;
+      }
+
+      .desktop-feature-row span {
+        font-size: 12px !important;
+      }
+
+      #mobile-menu {
+        width: 75% !important;
+      }
+
+    }
+
+
+    /* =====================================================
+       768 - 1023px
+    ===================================================== */
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+
+      .desktop-logo {
+        min-height: 88px;
+      }
+
+      .desktop-logo img {
+        width: 205px !important;
+      }
+
+      .desktop-feature-row {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+      }
+
+      .desktop-feature-row > div:nth-child(3n) {
+        border-right: 0 !important;
+      }
+
+      .desktop-feature-row > div {
+        min-height: 46px !important;
+      }
+
+      .desktop-feature-row span {
+        font-size: 13px !important;
+      }
+
+    }
+
+
+    /* =====================================================
+       1024 - 1279px
+    ===================================================== */
+
+    @media (min-width: 1024px) and (max-width: 1279px) {
+
+      .main-header-grid {
+        grid-template-columns: 230px minmax(0, 1fr) !important;
+      }
+
+      .desktop-logo {
+        margin-left: 0 !important;
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+      }
+
+      .desktop-logo img {
+        width: 200px !important;
+      }
+
+      .desktop-nav-row {
+        min-height: 62px !important;
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+        gap: 12px !important;
+      }
+
+      .desktop-nav-row nav {
+        gap: 12px !important;
+        font-size: 11px !important;
+        letter-spacing: .03em !important;
+        margin-left: 0 !important;
+      }
+
+      .desktop-nav-row > div {
+        gap: 8px !important;
+      }
+
+      #search-form {
+        max-width: 205px;
+      }
+
+      #search-input {
+        width: 145px !important;
+        height: 38px !important;
+        font-size: 11px !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+      }
+
+      #search-form button {
+        height: 38px;
+        padding-left: 9px !important;
+        padding-right: 9px !important;
+        font-size: 10px !important;
+      }
+
+      .desktop-feature-row {
+        grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+      }
+
+      .desktop-feature-row > div {
+        min-height: 42px !important;
+        gap: 5px !important;
+        padding-left: 4px !important;
+        padding-right: 4px !important;
+      }
+
+      .desktop-feature-row span {
+        font-size: 10px !important;
+      }
+
+      .desktop-feature-row img {
+        width: 16px !important;
+        height: 16px !important;
+      }
+
+    }
+
+
+    /* =====================================================
+       1280 - 1439px
+    ===================================================== */
+
+    @media (min-width: 1280px) and (max-width: 1439px) {
+
+      .main-header-grid {
+        grid-template-columns: 280px minmax(0, 1fr) !important;
+      }
+
+      .desktop-logo {
+        margin-left: 8px !important;
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+      }
+
+      .desktop-logo img {
+        width: 220px !important;
+      }
+
+      .desktop-nav-row {
+        padding-left: 22px !important;
+        padding-right: 22px !important;
+        gap: 15px !important;
+      }
+
+      .desktop-nav-row nav {
+        gap: 16px !important;
+        font-size: 12px !important;
+        margin-left: 0 !important;
+      }
+
+      #search-input {
+        width: 165px !important;
+        height: 40px !important;
+        font-size: 12px !important;
+      }
+
+      #search-form button {
+        height: 40px;
+        font-size: 11px !important;
+        padding-left: 11px !important;
+        padding-right: 11px !important;
+      }
+
+      .desktop-feature-row {
+        grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+      }
+
+      .desktop-feature-row > div {
+        min-height: 43px !important;
+        gap: 6px !important;
+      }
+
+      .desktop-feature-row span {
+        font-size: 11px !important;
+      }
+
+    }
+
+
+    /* =====================================================
+       1440 - 1535px
+    ===================================================== */
+
+    @media (min-width: 1440px) and (max-width: 1535px) {
+
+      .main-header-grid {
+        grid-template-columns: 320px minmax(0, 1fr) !important;
+      }
+
+      .desktop-logo {
+        margin-left: 15px !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+      }
+
+      .desktop-logo img {
+        width: 235px !important;
+      }
+
+      .desktop-nav-row {
+        padding-left: 28px !important;
+        padding-right: 28px !important;
+      }
+
+      .desktop-nav-row nav {
+        gap: 18px !important;
+        font-size: 13px !important;
+      }
+
+      #search-input {
+        width: 180px !important;
+      }
+
+      #search-form button {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+      }
+
+      .desktop-feature-row > div {
+        min-height: 44px !important;
+      }
+
+    }
+
+
+    /* =====================================================
+       1536 - 1699px
+    ===================================================== */
+
+    @media (min-width: 1536px) and (max-width: 1699px) {
+
+      .main-header-grid {
+        grid-template-columns: 350px minmax(0, 1fr) !important;
+      }
+
+      .desktop-logo {
+        margin-left: 24px !important;
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+      }
+
+      .desktop-logo img {
+        width: 250px !important;
+      }
+
+      .desktop-nav-row {
+        min-height: 68px !important;
+        padding-left: 32px !important;
+        padding-right: 32px !important;
+        gap: 18px !important;
+      }
+
+      .desktop-nav-row nav {
+        gap: 20px !important;
+        font-size: 15px !important;
+      }
+
+      .desktop-nav-row > div {
+        gap: 16px !important;
+      }
+
+      #search-input {
+        width: 210px !important;
+        height: 46px !important;
+      }
+
+      #search-form button {
+        height: 46px;
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+      }
+
+      .desktop-feature-row > div {
+        min-height: 45px !important;
+      }
+
+      .desktop-feature-row span {
+        font-size: 13px !important;
+      }
+
+    }
+
+
+    /* =====================================================
+       1700 - 2000px
+       ORIGINAL DESIGN PRESERVED
+    ===================================================== */
+
+    @media (min-width: 1700px) and (max-width: 2000px) {
+
+      .main-header-grid {
+        width: 100%;
+      }
+
+    }
+
+
+    /* =====================================================
+       2000px+
+    ===================================================== */
+
+    @media (min-width: 2001px) {
+
+      .main-header-grid {
+        max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+    }
+
+
+    /* =====================================================
+       MOBILE MENU SAFETY
+    ===================================================== */
+
+    @media (max-width: 1023px) {
+
+      #mobile-menu {
+        max-width: 420px;
+      }
+
+      #mobile-menu input {
+        min-width: 0;
+      }
+
+      #mobile-menu form {
+        min-width: 0;
+        width: 100%;
+      }
+
+      #mobile-menu .flex-wrap {
+        min-width: 0;
+      }
+
+    }
+
+
+    /* =====================================================
+       FEATURE OVERFLOW
+    ===================================================== */
+
+    .desktop-feature-row > div {
+      min-width: 0;
+    }
+
+    .desktop-feature-row span {
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+
+    /* =====================================================
+       SEARCH SAFETY
+    ===================================================== */
+
+    #search-form {
+      min-width: 0;
+    }
+
+    #search-input {
+      min-width: 0;
+    }
+
+    @media (min-width: 1024px) {
+
+      #search-form {
+        flex-shrink: 1;
+        min-width: 0;
+      }
+
+      #search-form input {
+        min-width: 0;
+      }
+
+    }
+
+
+    /* =====================================================
+       MOBILE SEARCH
+    ===================================================== */
+
+    @media (max-width: 1023px) {
+
+      #mobile-search-form {
+        width: 100%;
+      }
+
+      #mobile-search-form > div {
+        width: 100%;
+        min-width: 0;
+      }
+
+      #mobile-search-form input {
+        min-width: 0;
+        width: 100%;
+      }
+
+      #mobile-search-form button {
+        flex-shrink: 0;
+      }
+
+    }
+
+
+    /* =====================================================
+       MOBILE ICON AREA
+    ===================================================== */
+
+    @media (max-width: 1023px) {
+
+      .desktop-logo > div {
+        flex-shrink: 0;
+      }
+
+      #mobile-search-btn,
+      #cart-btn-mobile,
+      #hamburger-btn {
+        flex-shrink: 0;
+      }
+
+    }
+
+
+    /* =====================================================
+       SMALL MOBILE DRAWER
+    ===================================================== */
+
+    @media (max-width: 360px) {
+
+      #mobile-menu {
+        width: 94% !important;
+      }
+
+      #mobile-menu .px-4 {
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+      }
+
+      #mobile-menu nav {
+        font-size: 15px !important;
+      }
+
+      #mobile-menu .text-xl {
+        font-size: 19px !important;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body class="min-h-screen bg-bark text-white">
+
+<!-- ===================================================== -->
+<!-- HEADER -->
+<!-- ===================================================== -->
+
+<header class="w-full">
+
+  <!-- =================================================== -->
+  <!-- TOP GOLD ANNOUNCEMENT STRIP -->
+  <!-- =================================================== -->
+
+  <div class="gold-gradient text-bark">
+
+    <div
+      class="
+        top-strip-wrapper
+        max-w-[1800px]
+        mx-auto
+        px-3
+        sm:px-6
+        lg:px-10
+        xl:px-16
+      "
+    >
+
+      <div
+        class="
+          flex
+          items-center
+          justify-between
+          gap-2
+          min-h-10
+          py-1
+          top-strip-font
+          text-[10px]
+          sm:text-xs
+          md:text-sm
+          lg:text-[14px]
+        "
+      >
+
+        <a
+          href="tel:+12345678901"
+          class="
+            hidden
+            md:block
+            whitespace-nowrap
+            truncate
+            max-w-[230px]
+            lg:max-w-none
+          "
+        >
+          Shop ELEVATE: +1 (234) 567-8901
+        </a>
+
+
+        <div
+          class="
+            flex
+            items-center
+            gap-2
+            sm:gap-4
+            md:gap-6
+            mx-auto
+            min-w-0
+          "
+        >
+
+          <button
+            type="button"
+            data-announcement="prev"
+            aria-label="Previous announcement"
+            class="hover:opacity-70 transition shrink-0"
+          >
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-3 h-3 sm:w-4 sm:h-4"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+
+              <path
+                d="M15 6l-6 6 6 6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+
+            </svg>
+
+          </button>
+
+
+          <span
+            id="announcement-text"
+            class="
+              whitespace-nowrap
+              text-center
+              truncate
+              max-w-[190px]
+              sm:max-w-[300px]
+              md:max-w-none
+            "
+          >
+            Luxury Fashion for Men &amp; Women
+          </span>
+
+
+          <button
+            type="button"
+            data-announcement="next"
+            aria-label="Next announcement"
+            class="hover:opacity-70 transition shrink-0"
+          >
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-3 h-3 sm:w-4 sm:h-4"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+
+              <path
+                d="M9 6l6 6-6 6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+
+            </svg>
+
+          </button>
+
+        </div>
+
+
+        <a
+          href="mailto:support@elevatefashion.com"
+          class="
+            hidden
+            lg:block
+            whitespace-nowrap
+            truncate
+            max-w-[300px]
+            text-right
+          "
+        >
+          Email now : support@elevatefashion.com
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =================================================== -->
+  <!-- MAIN HEADER -->
+  <!-- =================================================== -->
+
+  <div class="bg-bark">
+
+    <div class="max-w-[1920px] mx-auto">
+
+      <div
+        class="
+          main-header-grid
+          grid
+          grid-cols-1
+          lg:grid-cols-[300px_minmax(0,1fr)]
+          xl:grid-cols-[350px_minmax(0,1fr)]
+          2xl:grid-cols-[380px_minmax(0,1fr)]
+          border-b
+          border-white/10
+        "
+      >
+
+        <!-- ================================================= -->
+        <!-- LOGO -->
+        <!-- ================================================= -->
+
+        <div
+          class="
+            desktop-logo
+            row-span-1
+            lg:row-span-2
+            flex
+            items-center
+            justify-between
+            px-4
+            sm:px-6
+            md:px-8
+            lg:px-5
+            xl:px-7
+            2xl:px-9
+            py-4
+            lg:py-0
+            border-r
+            border-white/10
+            ml-0
+            lg:ml-4
+            xl:ml-7
+            2xl:ml-10
+            min-w-0
+          "
+        >
+
+          <a
+            href="#"
+            class="block shrink-0"
+          >
+
+            <img
+              src="src/assets/images/logo.png"
+              alt="ELEVATE - Soaring to New Heights"
+              class="
+                block
+                w-[160px]
+                sm:w-[190px]
+                md:w-[220px]
+                lg:w-[235px]
+                xl:w-[260px]
+                2xl:w-[280px]
+                h-auto
+                object-contain
+              "
+            />
+
+          </a>
+
+
+          <!-- MOBILE ICONS -->
+
+          <div
+            class="
+              flex
+              items-center
+              gap-3
+              sm:gap-4
+              lg:hidden
+              shrink-0
+            "
+          >
+
+            <!-- MOBILE SEARCH -->
+
+            <button
+              id="mobile-search-btn"
+              type="button"
+              aria-label="Search"
+              aria-expanded="false"
+              class="
+                text-white/90
+                hover:text-gold-light
+                transition
+                shrink-0
+              "
+            >
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5 sm:w-[22px] sm:h-[22px]"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="7"
+                />
+
+                <path
+                  d="M21 21l-4.3-4.3"
+                  stroke-linecap="round"
+                />
+
+              </svg>
+
+            </button>
+
+
+            <!-- MOBILE CART -->
+
+            <button
+              id="cart-btn-mobile"
+              type="button"
+              aria-label="Cart"
+              class="
+                relative
+                text-white/90
+                hover:text-gold-light
+                transition
+                shrink-0
+              "
+            >
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5 sm:w-[22px] sm:h-[22px]"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+
+                <path
+                  d="
+                    M4 7h16
+                    l-1.2 11.2
+                    a2 2 0 01-2 1.8
+                    H7.2
+                    a2 2 0 01-2-1.8
+                    L4 7z
+                  "
+                  stroke-linejoin="round"
+                />
+
+                <path
+                  d="M8 7V5.5a4 4 0 018 0V7"
+                  stroke-linecap="round"
+                />
+
+              </svg>
+
+
+              <span
+                id="mobile-cart-count"
+                class="
+                  absolute
+                  -top-2
+                  -right-2
+                  text-[9px]
+                  font-bold
+                  w-4
+                  h-4
+                  rounded-full
+                  flex
+                  items-center
+                  justify-center
+                  bg-gold-light
+                  text-bark
+                "
+              >
+                0
+              </span>
+
+            </button>
+
+
+            <!-- HAMBURGER -->
+
+            <button
+              id="hamburger-btn"
+              type="button"
+              aria-label="Open menu"
+              aria-expanded="false"
+              class="
+                text-white/90
+                hover:text-gold-light
+                transition
+                flex
+                flex-col
+                justify-center
+                gap-1.5
+                w-6
+                h-6
+                shrink-0
+              "
+            >
+
+              <span class="block h-[1.5px] w-full bg-current"></span>
+
+              <span class="block h-[1.5px] w-full bg-current"></span>
+
+              <span class="block h-[1.5px] w-3/4 bg-current"></span>
+
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <!-- ================================================= -->
+        <!-- RIGHT HEADER -->
+        <!-- ================================================= -->
+
+        <div class="min-w-0">
+
+          <!-- NAV -->
+
+          <div
+            class="
+              desktop-nav-row
+              flex
+              items-center
+              justify-between
+              min-h-[60px]
+              sm:min-h-[64px]
+              lg:min-h-[70px]
+              border-b
+              border-white/10
+              px-4
+              sm:px-6
+              lg:px-7
+              xl:px-10
+              gap-4
+            "
+          >
+
+            <nav
+              class="
+                hidden
+                lg:flex
+                items-center
+                gap-4
+                xl:gap-7
+                2xl:gap-9
+                text-[14px]
+                xl:text-[17px]
+                2xl:text-[20px]
+                tracking-wide
+                ml-0
+                xl:ml-3
+                2xl:ml-5
+                font-semibold
+                whitespace-nowrap
+                min-w-0
+              "
+            >
+
+              <a
+                href="#"
+                class="text-gold-dark hover:text-gold-light transition font-semibold"
+              >
+                HOME
+              </a>
+
+              <a
+                href="#"
+                class="text-white/90 hover:text-gold-light transition"
+              >
+                SHOP
+              </a>
+
+              <a
+                href="#"
+                class="text-white/90 hover:text-gold-light transition"
+              >
+                MEN
+              </a>
+
+              <a
+                href="#"
+                class="text-white/90 hover:text-gold-light transition"
+              >
+                WOMEN
+              </a>
+
+              <a
+                href="#"
+                class="text-white/90 hover:text-gold-light transition"
+              >
+                ACCESSORIES
+              </a>
+
+              <a
+                href="#"
+                class="text-white/90 hover:text-gold-light transition"
+              >
+                ABOUT
+              </a>
+
+              <a
+                href="#"
+                class="text-white/90 hover:text-gold-light transition"
+              >
+                CONTACT
+              </a>
+
+            </nav>
+
+
+            <!-- SEARCH + ICONS -->
+
+            <div
+              class="
+                hidden
+                lg:flex
+                items-center
+                gap-3
+                xl:gap-5
+                2xl:gap-[22px]
+                ml-auto
+                shrink-0
+              "
+            >
+
+              <!-- DESKTOP SEARCH -->
+
+              <form
+                id="search-form"
+                class="flex items-stretch min-w-0"
+              >
+
+                <input
+                  type="text"
+                  id="search-input"
+                  placeholder="Search product..."
+                  autocomplete="off"
+                  class="
+                    w-28
+                    xl:w-48
+                    2xl:w-64
+                    h-10
+                    xl:h-12
+                    font-urbanist
+                    bg-white/5
+                    border
+                    border-white/10
+                    text-white
+                    placeholder-white/50
+                    text-[13px]
+                    xl:text-[15px]
+                    2xl:text-[16px]
+                    px-3
+                    xl:px-4
+                    rounded-l-[12px]
+                    xl:rounded-l-[14px]
+                    focus:outline-none
+                    focus:ring-1
+                    focus:ring-gold-dark
+                  "
+                />
+
+                <button
+                  type="submit"
+                  class="
+                    gold-gradient
+                    text-bark
+                    text-[12px]
+                    xl:text-[14px]
+                    2xl:text-[16px]
+                    font-semibold
+                    tracking-wide
+                    font-urbanist
+                    px-3
+                    xl:px-4
+                    2xl:px-5
+                    rounded-r-[12px]
+                    xl:rounded-r-[14px]
+                    hover:brightness-95
+                    transition
+                    whitespace-nowrap
+                    shrink-0
+                  "
+                >
+                  SEARCH
+                </button>
+
+              </form>
+
+
+              <!-- ACCOUNT -->
+
+              <button
+                id="account-btn"
+                type="button"
+                aria-label="Account"
+                class="
+                  text-white/90
+                  hover:text-gold-light
+                  transition
+                  shrink-0
+                "
+              >
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                >
+
+                  <circle
+                    cx="12"
+                    cy="8"
+                    r="4"
+                  />
+
+                  <path
+                    d="M4 20c0-4 4-6 8-6s8 2 8 6"
+                    stroke-linecap="round"
+                  />
+
+                </svg>
+
+              </button>
+
+
+              <!-- WISHLIST -->
+
+              <button
+                id="wishlist-btn"
+                type="button"
+                aria-label="Favourite"
+                class="
+                  group
+                  relative
+                  flex
+                  items-center
+                  justify-center
+                  w-6
+                  h-6
+                  text-white/90
+                  hover:text-gold-light
+                  transition-all
+                  duration-200
+                  shrink-0
+                "
+              >
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="
+                    w-[21px]
+                    h-[21px]
+                    transition-transform
+                    duration-200
+                    group-hover:scale-[1.08]
+                  "
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+
+                  <path
+                    d="
+                      M20.84 4.61
+                      a5.5 5.5 0 0 0-7.78 0
+                      L12 5.67
+                      l-1.06-1.06
+                      a5.5 5.5 0 0 0-7.78 7.78
+                      L12 21.23
+                      l8.84-8.84
+                      a5.5 5.5 0 0 0 0-7.78
+                    "
+                  />
+
+                </svg>
+
+
+                <span
+                  id="wishlist-count"
+                  class="
+                    absolute
+                    -top-[7px]
+                    -right-[7px]
+                    flex
+                    items-center
+                    justify-center
+                    w-[16px]
+                    h-[16px]
+                    rounded-full
+                    bg-gold-light
+                    text-bark
+                    text-[9px]
+                    font-bold
+                    leading-none
+                    font-urbanist
+                  "
+                >
+                  0
+                </span>
+
+              </button>
+
+
+              <!-- CART -->
+
+              <button
+                id="cart-btn"
+                type="button"
+                aria-label="Cart"
+                class="
+                  group
+                  relative
+                  flex
+                  items-center
+                  justify-center
+                  w-6
+                  h-6
+                  text-white/90
+                  hover:text-gold-light
+                  transition-all
+                  duration-200
+                  shrink-0
+                "
+              >
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="
+                    w-[21px]
+                    h-[21px]
+                    transition-transform
+                    duration-200
+                    group-hover:scale-[1.08]
+                  "
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+
+                  <path d="M5 8.5h14l-1 11H6L5 8.5z" />
+
+                  <path d="M8.5 8.5V6a3.5 3.5 0 017 0v2.5" />
+
+                </svg>
+
+
+                <span
+                  id="cart-count"
+                  class="
+                    absolute
+                    -top-[7px]
+                    -right-[7px]
+                    flex
+                    items-center
+                    justify-center
+                    w-[16px]
+                    h-[16px]
+                    rounded-full
+                    bg-gold-light
+                    text-bark
+                    text-[9px]
+                    font-bold
+                    leading-none
+                    font-urbanist
+                  "
+                >
+                  0
+                </span>
+
+              </button>
+
+            </div>
+
+          </div>
+
+
+          <!-- FEATURE ROW -->
+
+          <div
+            class="
+              desktop-feature-row
+              grid
+              grid-cols-1
+              min-[400px]:grid-cols-2
+              md:grid-cols-3
+              xl:grid-cols-5
+              text-white/70
+              font-urbanist
+              font-normal
+              text-[12px]
+              sm:text-[13px]
+              md:text-[14px]
+              xl:text-[15px]
+              leading-none
+              tracking-normal
+            "
+            style="background-color:#16090D;"
+          >
+
+            <div
+              class="
+                min-h-[42px]
+                sm:min-h-[45px]
+                flex
+                items-center
+                justify-center
+                gap-2
+                border-r
+                border-b
+                xl:border-b-0
+                border-white/10
+                px-2
+              "
+            >
+
+              <img
+                src="src/assets/images/header-icon1.svg"
+                alt=""
+                class="w-4 h-4 sm:w-5 sm:h-5 opacity-90 shrink-0"
+              />
+
+              <span class="whitespace-nowrap">
+                Free shipping
+              </span>
+
+            </div>
+
+
+            <div
+              class="
+                min-h-[42px]
+                sm:min-h-[45px]
+                flex
+                items-center
+                justify-center
+                gap-2
+                border-r
+                border-b
+                xl:border-b-0
+                border-white/10
+                px-2
+              "
+            >
+
+              <img
+                src="src/assets/images/header-icon2.svg"
+                alt=""
+                class="w-4 h-4 sm:w-5 sm:h-5 opacity-90 shrink-0"
+              />
+
+              <span class="whitespace-nowrap">
+                Secure payment
+              </span>
+
+            </div>
+
+
+            <div
+              class="
+                min-h-[42px]
+                sm:min-h-[45px]
+                flex
+                items-center
+                justify-center
+                gap-2
+                border-r
+                border-b
+                xl:border-b-0
+                border-white/10
+                px-2
+              "
+            >
+
+              <img
+                src="src/assets/images/header-icon3.svg"
+                alt=""
+                class="w-4 h-4 sm:w-5 sm:h-5 opacity-90 shrink-0"
+              />
+
+              <span class="whitespace-nowrap">
+                24/7 support
+              </span>
+
+            </div>
+
+
+            <div
+              class="
+                min-h-[42px]
+                sm:min-h-[45px]
+                flex
+                items-center
+                justify-center
+                gap-2
+                border-r
+                border-b
+                xl:border-b-0
+                border-white/10
+                px-2
+              "
+            >
+
+              <img
+                src="src/assets/images/header-icon4.svg"
+                alt=""
+                class="w-4 h-4 sm:w-5 sm:h-5 opacity-90 shrink-0"
+              />
+
+              <span class="whitespace-nowrap">
+                Festival offer
+              </span>
+
+            </div>
+
+
+            <div
+              class="
+                min-h-[42px]
+                sm:min-h-[45px]
+                flex
+                items-center
+                justify-center
+                gap-2
+                px-2
+              "
+            >
+
+              <img
+                src="src/assets/images/header-icon5.svg"
+                alt=""
+                class="w-4 h-4 sm:w-5 sm:h-5 opacity-90 shrink-0"
+              />
+
+              <span class="whitespace-nowrap">
+                Refund policy
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =================================================== -->
+  <!-- MOBILE TOP SEARCH -->
+  <!-- =================================================== -->
+
+  <div class="bg-bark">
+
+    <div
+      class="
+        max-w-[1800px]
+        mx-auto
+        px-3
+        sm:px-6
+        md:px-8
+        lg:px-10
+        xl:px-16
+      "
+    >
+
+      <form
+        id="mobile-search-form"
+        class="
+          hidden
+          pb-4
+          lg:hidden
+        "
+      >
+
+        <div class="flex items-stretch w-full min-w-0">
+
+          <input
+            type="text"
+            id="mobile-search-input"
+            placeholder="Search product..."
+            autocomplete="off"
+            class="
+              flex-1
+              min-w-0
+              bg-white/5
+              border
+              border-white/10
+              text-white
+              placeholder-white/50
+              text-sm
+              px-4
+              py-2.5
+              rounded-l-full
+              focus:outline-none
+              focus:ring-1
+              focus:ring-gold-dark
+            "
+          />
+
+          <button
+            type="submit"
+            class="
+              gold-gradient
+              text-bark
+              text-xs
+              sm:text-sm
+              font-semibold
+              tracking-wide
+              px-4
+              sm:px-5
+              rounded-r-full
+              whitespace-nowrap
+              shrink-0
+            "
+          >
+            SEARCH
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- ===================================================== -->
+<!-- MOBILE BACKDROP -->
+<!-- ===================================================== -->
+
+<div
+  id="mobile-backdrop"
+  class="
+    fixed
+    inset-0
+    bg-black/60
+    z-40
+    opacity-0
+    pointer-events-none
+    lg:hidden
+    transition-opacity
+    duration-300
+    ease-in-out
+  "
+></div>
+
+
+<!-- ===================================================== -->
+<!-- MOBILE MENU -->
+<!-- ===================================================== -->
+
+<div
+  id="mobile-menu"
+  class="
+    fixed
+    top-0
+    right-0
+    h-full
+    w-[88%]
+    sm:w-[75%]
+    md:w-[55%]
+    max-w-sm
+    bg-bark
+    z-50
+    translate-x-full
+    opacity-0
+    lg:hidden
+    overflow-y-auto
+    shadow-2xl
+    border-l
+    border-white/10
+    transition-all
+    duration-300
+    ease-in-out
+"
+>
+
+  <div
+    class="
+      flex
+      items-center
+      justify-between
+      px-4
+      sm:px-5
+      py-5
+      border-b
+      border-white/10
+      sticky
+      top-0
+      bg-bark
+      z-10
+    "
+  >
+
+    <span
+      class="
+        text-xl
+        sm:text-2xl
+        tracking-[0.18em]
+        elevate-logo
+      "
+    >
+      ELEVATE
+    </span>
+
+
+    <button
+      id="close-menu-btn"
+      type="button"
+      aria-label="Close menu"
+      class="
+        text-white/80
+        hover:text-gold-light
+        transition
+        shrink-0
+      "
+    >
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="w-6 h-6"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+      >
+
+        <path
+          d="M6 6l12 12M18 6L6 18"
+          stroke-linecap="round"
+        />
+
+      </svg>
+
+    </button>
+
+  </div>
+
+
+  <!-- MOBILE NAV -->
+
+  <nav
+    class="
+      flex
+      flex-col
+      px-4
+      sm:px-5
+      py-6
+      gap-5
+      text-base
+      sm:text-lg
+      tracking-wide
+    "
+  >
+
+    <a
+      href="#"
+      class="text-gold-dark font-semibold hover:text-gold-light transition"
+    >
+      HOME
+    </a>
+
+    <a
+      href="#"
+      class="text-white/90 hover:text-gold-light transition"
+    >
+      SHOP
+    </a>
+
+    <a
+      href="#"
+      class="text-white/90 hover:text-gold-light transition"
+    >
+      MEN
+    </a>
+
+    <a
+      href="#"
+      class="text-white/90 hover:text-gold-light transition"
+    >
+      WOMEN
+    </a>
+
+    <a
+      href="#"
+      class="text-white/90 hover:text-gold-light transition"
+    >
+      ACCESSORIES
+    </a>
+
+    <a
+      href="#"
+      class="text-white/90 hover:text-gold-light transition"
+    >
+      ABOUT
+    </a>
+
+    <a
+      href="#"
+      class="text-white/90 hover:text-gold-light transition"
+    >
+      CONTACT
+    </a>
+
+  </nav>
+
+
+  <!-- MOBILE MENU SEARCH -->
+
+  <div class="px-4 sm:px-5 pb-6">
+
+    <form
+      id="mobile-menu-search-form"
+      class="
+        flex
+        items-stretch
+        mb-6
+        w-full
+        min-w-0
+      "
+    >
+
+      <input
+        id="mobile-menu-search-input"
+        type="text"
+        placeholder="Search product..."
+        autocomplete="off"
+        class="
+          flex-1
+          min-w-0
+          bg-white/5
+          border
+          border-white/10
+          text-white
+          placeholder-white/50
+          text-sm
+          px-4
+          py-2
+          rounded-l-full
+          focus:outline-none
+          focus:ring-1
+          focus:ring-gold-dark
+        "
+      />
+
+      <button
+        type="submit"
+        class="
+          gold-gradient
+          text-bark
+          text-xs
+          sm:text-sm
+          font-semibold
+          tracking-wide
+          px-4
+          sm:px-5
+          rounded-r-full
+          whitespace-nowrap
+          shrink-0
+        "
+      >
+        SEARCH
+      </button>
+
+    </form>
+
+
+    <!-- MOBILE ACCOUNT / WISHLIST -->
+
+    <div
+      class="
+        flex
+        flex-wrap
+        items-center
+        gap-5
+        sm:gap-6
+        text-white/90
+      "
+    >
+
+      <!-- ACCOUNT -->
+
+      <button
+        id="mobile-account-btn"
+        type="button"
+        class="
+          flex
+          items-center
+          gap-2
+          hover:text-gold-light
+          transition
+        "
+      >
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-5 h-5"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+        >
+
+          <circle
+            cx="12"
+            cy="8"
+            r="4"
+          />
+
+          <path
+            d="M4 20c0-4 4-6 8-6s8 2 8 6"
+            stroke-linecap="round"
+          />
+
+        </svg>
+
+        <span class="text-sm">
+          Account
+        </span>
+
+      </button>
+
+
+      <!-- WISHLIST -->
+
+      <button
+        id="mobile-wishlist-btn"
+        type="button"
+        class="
+          flex
+          items-center
+          gap-2
+          relative
+          hover:text-gold-light
+          transition
+        "
+      >
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-5 h-5"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+        >
+
+          <path
+            d="
+              M12 20
+              s-7-4.35-9.5-8.5
+              C1 8 2.5 4.5 6 4.5
+              c2 0 3.5 1.2 4 2.5
+              .5-1.3 2-2.5 4-2.5
+              3.5 0 5 3.5 3.5 7
+              C19 15.65 12 20 12 20z
+            "
+          />
+
+        </svg>
+
+        <span class="text-sm">
+          Wishlist
+          (<span id="mobile-wishlist-count">0</span>)
+        </span>
+
+      </button>
+
+    </div>
+
+
+    <!-- CONTACT DETAILS -->
+
+    <div
+      class="
+        mt-8
+        pt-6
+        border-t
+        border-white/10
+        flex
+        flex-col
+        gap-3
+        text-xs
+        sm:text-sm
+        text-white/70
+        break-words
+      "
+    >
+
+      <a
+        href="tel:+12345678901"
+        class="hover:text-white transition"
+      >
+        Shop ELEVATE: +1 (234) 567-8901
+      </a>
+
+      <a
+        href="mailto:support@elevatefashion.com"
+        class="hover:text-white transition break-all"
+      >
+        Email now : support@elevatefashion.com
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+<!-- ===================================================== -->
+<!-- HERO -->
+<!-- ===================================================== -->
+
+<section
+  class="
+    relative
+    w-full
+    overflow-hidden
+    bg-[#F5F2EC]
+
+    min-h-[620px]
+    min-[400px]:min-h-[680px]
+    sm:min-h-[760px]
+    md:min-h-[820px]
+
+    min-[1001px]:min-h-0
+  "
+>
+  <img
+    src="src/assets/images/hero.jpg"
+    alt="ELEVATE Luxury Fashion"
+    class="
+      absolute
+      inset-0
+      w-full
+      h-full
+      object-cover
+      object-center
+
+      min-[1001px]:static
+      min-[1001px]:block
+      min-[1001px]:w-full
+      min-[1001px]:h-auto
+      min-[1001px]:object-contain
+    "
+  />
+</section>
+<!-- ===================================================== -->
+<!-- ===================================================== -->
+<!-- EXPLORE THE COLLECTION -->
+<!-- ===================================================== -->
+<!-- ===================================================== -->
+
+<section
+  class="
+    w-full
+    bg-panel
+    px-4
+    sm:px-6
+    md:px-8
+    lg:px-10
+    xl:px-14
+    2xl:px-16
+    pt-14
+    sm:pt-16
+    md:pt-20
+    lg:pt-24
+    2xl:pt-28
+    pb-0
+  "
+>
+
+  <!-- ================================================= -->
+  <!-- COLLECTION HEADING -->
+  <!-- ================================================= -->
+
+  <div
+    class="
+      max-w-2xl
+      mx-auto
+      text-center
+      mb-9
+      sm:mb-11
+      md:mb-14
+      lg:mb-16
+    "
+  >
+
+    <h2
+      class="
+        font-cormorant
+        font-medium
+        text-white
+        text-[32px]
+        xs:text-[36px]
+        sm:text-[44px]
+        md:text-[50px]
+        lg:text-[56px]
+        2xl:text-[62px]
+        leading-[1.1]
+        tracking-tight
+      "
+    >
+      Explore the Collection
+    </h2>
+
+    <p
+      class="
+        font-urbanist
+        text-gray-100/55
+        font-normal
+        text-[11px]
+        xs:text-sm
+        sm:text-base
+        md:text-[17px]
+        leading-relaxed
+        mt-3
+        sm:mt-4
+        px-1
+        sm:px-2
+        max-w-[500px]
+        mx-auto
+      "
+    >
+      Discover premium collections designed to elevate your everyday
+      style with confidence, comfort, and luxury.
+    </p>
+
+  </div>
+
+
+<!-- ================================================= -->
+<!-- COLLECTION CARDS -->
+<!-- ================================================= -->
+
+<div class="max-w-[1600px] mx-auto">
+
+  <!-- ================================================= -->
+  <!-- COLLECTION TRACK -->
+  <!-- ================================================= -->
+<div
+  id="collection-track"
+  class="
+    flex
+    gap-3
+    xs:gap-4
+    sm:gap-5
+    lg:gap-6
+    overflow-x-scroll
+    no-scrollbar
+    snap-x
+    snap-mandatory
+    scroll-smooth
+    pb-2
+    select-none
+    cursor-grab
+    touch-pan-x
+  "
+  style="scroll-behavior: smooth;"
+>
+
+    <!-- ================================================= -->
+    <!-- WOMEN -->
+    <!-- ================================================= -->
+
+    <article
+      class="
+      card-frame
+        group
+        snap-center
+        shrink-0
+        rounded-2xl
+        p-2.5
+        sm:p-3
+        w-[82%]
+        xs:w-[76%]
+        sm:w-[47%]
+        md:w-[32%]
+        lg:w-[39%]
+        xl:w-[290px]
+        2xl:w-[300px]
+        h-[350px]
+        bg-[#1F2D27]
+        transition-all
+        duration-300
+        ease-out
+      "
+    >
+
+      <div
+        class="
+          relative
+          rounded-xl
+          overflow-hidden
+          aspect-[4/5]
+          h-[290px]
+          w-full
+        "
+      >
+
+        <img
+          src="src/assets/images/collection1.jpg"
+          alt="Women's fashion"
+          draggable="false"
+          class="
+            w-full
+            h-full
+            object-cover
+            pointer-events-none
+          "
+        />
+
+        <button
+          type="button"
+          class="
+            absolute
+            inset-0
+            m-auto
+            h-11
+            w-[128px]
+            bg-white
+            text-[#16090D]
+            rounded-lg
+            flex
+            items-center
+            justify-center
+            gap-1.5
+            font-urbanist
+            text-sm
+            font-semibold
+            shadow-lg
+            opacity-0
+            scale-90
+            pointer-events-none
+            group-hover:opacity-100
+            group-hover:scale-100
+            group-hover:pointer-events-auto
+            transition-all
+            duration-300
+          "
+        >
+          Shop Now
+
+          <svg
+            class="w-3.5 h-3.5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </button>
+
+      </div>
+
+      <div
+        class="
+          flex
+          items-center
+          justify-between
+          px-1
+          py-2
+          gap-2
+        "
+      >
+
+        <span
+          class="
+            font-cormorant
+            text-white
+            text-base
+            xs:text-lg
+            sm:text-xl
+            leading-none
+          "
+        >
+          Women
+        </span>
+
+        <span
+          class="
+            gold-gradient-text
+            font-urbanist
+            text-sm
+            sm:text-base
+            font-bold
+            uppercase
+            tracking-wide
+            whitespace-nowrap
+            leading-none
+          "
+        >
+          8+ Item
+        </span>
+
+      </div>
+
+    </article>
+
+
+    <!-- ================================================= -->
+    <!-- MEN -->
+    <!-- ================================================= -->
+
+    <article
+      class="
+      card-frame
+        group
+        snap-center
+        shrink-0
+        rounded-2xl
+        p-2.5
+        sm:p-3
+        w-[82%]
+        xs:w-[76%]
+        sm:w-[47%]
+        md:w-[32%]
+        lg:w-[39%]
+        xl:w-[290px]
+        2xl:w-[300px]
+        h-[350px]
+        bg-[#1F2D27]
+        transition-all
+        duration-300
+        ease-out
+      "
+    >
+
+      <div
+        class="
+          relative
+          rounded-xl
+          overflow-hidden
+          aspect-[4/5]
+          h-[290px]
+          w-full
+        "
+      >
+
+        <img
+          src="src/assets/images/collection2.png"
+          alt="Men's fashion"
+          draggable="false"
+          class="
+            w-full
+            h-full
+            object-cover
+            pointer-events-none
+          "
+        />
+
+        <button
+          type="button"
+          class="
+            absolute
+            inset-0
+            m-auto
+            h-11
+            w-[128px]
+            bg-white
+            text-[#16090D]
+            rounded-lg
+            flex
+            items-center
+            justify-center
+            gap-1.5
+            font-urbanist
+            text-sm
+            font-semibold
+            shadow-lg
+            opacity-0
+            scale-90
+            pointer-events-none
+            group-hover:opacity-100
+            group-hover:scale-100
+            group-hover:pointer-events-auto
+            transition-all
+            duration-300
+          "
+        >
+          Shop Now
+
+          <svg
+            class="w-3.5 h-3.5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </button>
+
+      </div>
+
+      <div
+        class="
+          flex
+          items-center
+          justify-between
+          px-1
+          py-2
+          gap-2
+        "
+      >
+
+        <span
+          class="
+            font-cormorant
+            text-white
+            text-base
+            xs:text-lg
+            sm:text-xl
+            leading-none
+          "
+        >
+          Men
+        </span>
+
+        <span
+          class="
+            gold-gradient-text
+            font-urbanist
+            text-sm
+            sm:text-base
+            font-bold
+            uppercase
+            tracking-wide
+            whitespace-nowrap
+            leading-none
+          "
+        >
+          9+ Item
+        </span>
+
+      </div>
+
+    </article>
+
+
+    <!-- ================================================= -->
+    <!-- ACCESSORIES -->
+    <!-- ================================================= -->
+
+    <article
+      class="
+      card-frame
+        group
+        snap-center
+        shrink-0
+        rounded-2xl
+        p-2.5
+        sm:p-3
+        w-[82%]
+        xs:w-[76%]
+        sm:w-[47%]
+        md:w-[32%]
+        lg:w-[39%]
+        xl:w-[290px]
+        2xl:w-[300px]
+        h-[350px]
+        bg-[#1F2D27]
+        transition-all
+        duration-300
+        ease-out
+      "
+    >
+
+      <div
+        class="
+          relative
+          rounded-xl
+          overflow-hidden
+          aspect-[4/5]
+          h-[290px]
+          w-full
+        "
+      >
+
+        <img
+          src="src/assets/images/collection3.jpg"
+          alt="Accessories"
+          draggable="false"
+          class="
+            w-full
+            h-full
+            object-cover
+            pointer-events-none
+          "
+        />
+
+        <button
+          type="button"
+          class="
+            absolute
+            inset-0
+            m-auto
+            h-11
+            w-[128px]
+            bg-white
+            text-[#16090D]
+            rounded-lg
+            flex
+            items-center
+            justify-center
+            gap-1.5
+            font-urbanist
+            text-sm
+            font-semibold
+            shadow-lg
+            opacity-0
+            scale-90
+            pointer-events-none
+            group-hover:opacity-100
+            group-hover:scale-100
+            group-hover:pointer-events-auto
+            transition-all
+            duration-300
+          "
+        >
+          Shop Now
+
+          <svg
+            class="w-3.5 h-3.5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </button>
+
+      </div>
+
+      <div
+        class="
+          flex
+          items-center
+          justify-between
+          px-1
+          py-2
+          gap-2
+        "
+      >
+
+        <span
+          class="
+            font-cormorant
+            text-white
+            text-base
+            xs:text-lg
+            sm:text-xl
+            leading-none
+          "
+        >
+          Accessories
+        </span>
+
+        <span
+          class="
+            gold-gradient-text
+            font-urbanist
+            text-sm
+            sm:text-base
+            font-bold
+            uppercase
+            tracking-wide
+            whitespace-nowrap
+            leading-none
+          "
+        >
+          2+ Item
+        </span>
+
+      </div>
+
+    </article>
+
+
+    <!-- ================================================= -->
+    <!-- NEW ARRIVALS -->
+    <!-- ================================================= -->
+
+    <article
+      class="
+      card-frame
+        group
+        snap-center
+        shrink-0
+        rounded-2xl
+        p-2.5
+        sm:p-3
+        w-[82%]
+        xs:w-[76%]
+        sm:w-[47%]
+        md:w-[32%]
+        lg:w-[39%]
+        xl:w-[290px]
+        2xl:w-[300px]
+        h-[350px]
+        bg-[#1F2D27]
+        transition-all
+        duration-300
+        ease-out
+      "
+    >
+
+      <div
+        class="
+          relative
+          rounded-xl
+          overflow-hidden
+          aspect-[4/5]
+          h-[290px]
+          w-full
+        "
+      >
+
+        <img
+          src="src/assets/images/collection4.jpg"
+          alt="New Arrivals"
+          draggable="false"
+          class="
+            w-full
+            h-full
+            object-cover
+            pointer-events-none
+          "
+        />
+
+        <button
+          type="button"
+          class="
+            absolute
+            inset-0
+            m-auto
+            h-11
+            w-[128px]
+            bg-white
+            text-[#16090D]
+            rounded-lg
+            flex
+            items-center
+            justify-center
+            gap-1.5
+            font-urbanist
+            text-sm
+            font-semibold
+            shadow-lg
+            opacity-0
+            scale-90
+            pointer-events-none
+            group-hover:opacity-100
+            group-hover:scale-100
+            group-hover:pointer-events-auto
+            transition-all
+            duration-300
+          "
+        >
+          Shop Now
+
+          <svg
+            class="w-3.5 h-3.5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </button>
+
+      </div>
+
+      <div
+        class="
+          flex
+          items-center
+          justify-between
+          px-1
+          py-2
+          gap-2
+        "
+      >
+
+        <span
+          class="
+            font-cormorant
+            text-white
+            text-base
+            xs:text-lg
+            sm:text-xl
+            leading-none
+          "
+        >
+          New Arrivals
+        </span>
+
+        <span
+          class="
+            gold-gradient-text
+            font-urbanist
+            text-sm
+            sm:text-base
+            font-bold
+            uppercase
+            tracking-wide
+            whitespace-nowrap
+            leading-none
+          "
+        >
+          15+ Item
+        </span>
+
+      </div>
+
+    </article>
+
+
+    <!-- ================================================= -->
+    <!-- ESSENTIALS -->
+    <!-- ================================================= -->
+
+    <article
+      class="
+      card-frame
+        group
+        snap-center
+        shrink-0
+        rounded-2xl
+        p-2.5
+        sm:p-3
+        w-[82%]
+        xs:w-[76%]
+        sm:w-[47%]
+        md:w-[32%]
+        lg:w-[39%]
+        xl:w-[290px]
+        2xl:w-[300px]
+        h-[350px]
+        bg-[#1F2D27]
+        transition-all
+        duration-300
+        ease-out
+      "
+    >
+
+      <div
+        class="
+          relative
+          rounded-xl
+          overflow-hidden
+          aspect-[4/5]
+          h-[290px]
+          w-full
+        "
+      >
+
+        <img
+          src="src/assets/images/collection5.jpg"
+          alt="Essentials"
+          draggable="false"
+          class="
+            w-full
+            h-full
+            object-cover
+            pointer-events-none
+          "
+        />
+
+        <button
+          type="button"
+          class="
+            absolute
+            inset-0
+            m-auto
+            h-11
+            w-[128px]
+            bg-white
+            text-[#16090D]
+            rounded-lg
+            flex
+            items-center
+            justify-center
+            gap-1.5
+            font-urbanist
+            text-sm
+            font-semibold
+            shadow-lg
+            opacity-0
+            scale-90
+            pointer-events-none
+            group-hover:opacity-100
+            group-hover:scale-100
+            group-hover:pointer-events-auto
+            transition-all
+            duration-300
+          "
+        >
+          Shop Now
+
+          <svg
+            class="w-3.5 h-3.5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </button>
+
+      </div>
+
+      <div
+        class="
+          flex
+          items-center
+          justify-between
+          px-1
+          py-2
+          gap-2
+        "
+      >
+
+        <span
+          class="
+            font-cormorant
+            text-white
+            text-base
+            xs:text-lg
+            sm:text-xl
+            leading-none
+          "
+        >
+          Essentials
+        </span>
+
+        <span
+          class="
+            gold-gradient-text
+            font-urbanist
+            text-sm
+            sm:text-base
+            font-bold
+            uppercase
+            tracking-wide
+            whitespace-nowrap
+            leading-none
+          "
+        >
+          10+ Item
+        </span>
+
+      </div>
+
+    </article>
+
+  </div>
+
+
+  <!-- ================================================= -->
+  <!-- PAGINATION DOTS -->
+  <!-- ================================================= -->
+
+  <div
+    id="collection-dots"
+    class="
+      flex
+      items-center
+      justify-center
+      gap-2
+      mt-4
+      sm:mt-5
+      mb-16
+      sm:mb-20
+      lg:mb-[90px]
+    "
+  >
+
+    <!-- DOT 1 -->
+
+    <button
+      type="button"
+      data-dot="0"
+      aria-label="Collection slide 1"
+      class="
+        w-2.5
+        h-2.5
+        rounded-full
+        gold-gradient-bg
+        transition-all
+        duration-300
+        cursor-pointer
+      "
+    ></button>
+
+
+    <!-- DOT 2 -->
+
+    <button
+      type="button"
+      data-dot="1"
+      aria-label="Collection slide 2"
+      class="
+        w-2
+        h-2
+        rounded-full
+        bg-white/30
+        transition-all
+        duration-300
+        cursor-pointer
+      "
+    ></button>
+
+
+    <!-- DOT 3 -->
+
+    <button
+      type="button"
+      data-dot="2"
+      aria-label="Collection slide 3"
+      class="
+        w-2
+        h-2
+        rounded-full
+        bg-white/30
+        transition-all
+        duration-300
+        cursor-pointer
+      "
+    ></button>
+
+
+    <!-- DOT 4 -->
+
+    <button
+      type="button"
+      data-dot="3"
+      aria-label="Collection slide 4"
+      class="
+        w-2
+        h-2
+        rounded-full
+        bg-white/30
+        transition-all
+        duration-300
+        cursor-pointer
+      "
+    ></button>
+
+
+    <!-- DOT 5 -->
+
+    <button
+      type="button"
+      data-dot="4"
+      aria-label="Collection slide 5"
+      class="
+        w-2
+        h-2
+        rounded-full
+        bg-white/30
+        transition-all
+        duration-300
+        cursor-pointer
+      "
+    ></button>
+
+  </div>
+
+</div>
+<!-- ===================================================== -->
+<!-- ELEVATE — FULL WIDTH RESPONSIVE MARQUEE TICKER       -->
+<!-- ===================================================== -->
+
+<div
+  class="
+    relative
+    left-1/2
+    w-screen
+    max-w-none
+    -translate-x-1/2
+    overflow-hidden
+    bg-[#1F2D27]
+    border-t
+    border-white/5
+    py-3
+    sm:py-3.5
+    md:py-4
+  "
+>
+
+  <!-- =================================================== -->
+  <!-- MARQUEE TRACK -->
+  <!-- =================================================== -->
+
+  <div
+    class="
+      flex
+      w-max
+      items-center
+      marquee-track
+    "
+  >
+
+    <!-- ================================================= -->
+    <!-- FIRST TRACK -->
+    <!-- ================================================= -->
+
+    <div class="flex shrink-0 items-center">
+
+      <ul
+        class="
+          flex
+          shrink-0
+          items-center
+          gap-5
+          sm:gap-7
+          md:gap-8
+          lg:gap-10
+          px-4
+          sm:px-5
+          md:px-6
+        "
+      >
+
+        <!-- TEXT 1 -->
+        <li
+          class="
+            shrink-0
+            whitespace-nowrap
+            font-urbanist
+            text-xs
+            sm:text-sm
+            md:text-base
+            lg:text-lg
+            leading-none
+            text-white
+          "
+        >
+          Buy 2, Get 1 free on all apparel
+        </li>
+
+        <!-- ICON 1 -->
+        <li class="flex shrink-0 items-center justify-center">
+          <img
+            src="src/assets/images/collection-icon.svg"
+            alt=""
+            class="
+              block
+              w-6
+              h-6
+              sm:w-7
+              sm:h-7
+              md:w-8
+              md:h-8
+              lg:w-9
+              lg:h-9
+              opacity-90
+            "
+          />
+        </li>
+
+        <!-- TEXT 2 -->
+        <li
+          class="
+            shrink-0
+            whitespace-nowrap
+            font-urbanist
+            text-xs
+            sm:text-sm
+            md:text-base
+            lg:text-lg
+            leading-none
+            text-white
+          "
+        >
+          ELEVATE Soaring to New Heights
+        </li>
+
+        <!-- ICON 2 -->
+        <li class="flex shrink-0 items-center justify-center">
+          <img
+            src="src/assets/images/collection-icon.svg"
+            alt=""
+            class="
+              block
+              w-6
+              h-6
+              sm:w-7
+              sm:h-7
+              md:w-8
+              md:h-8
+              lg:w-9
+              lg:h-9
+              opacity-90
+            "
+          />
+        </li>
+
+        <!-- TEXT 3 -->
+        <li
+          class="
+            shrink-0
+            whitespace-nowrap
+            font-urbanist
+            text-xs
+            sm:text-sm
+            md:text-base
+            lg:text-lg
+            leading-none
+            text-white
+          "
+        >
+          Where Luxury Meets Elevation
+        </li>
+
+        <!-- ICON 3 -->
+        <li class="flex shrink-0 items-center justify-center">
+          <img
+            src="src/assets/images/collection-icon.svg"
+            alt=""
+            class="
+              block
+              w-6
+              h-6
+              sm:w-7
+              sm:h-7
+              md:w-8
+              md:h-8
+              lg:w-9
+              lg:h-9
+              opacity-90
+            "
+          />
+        </li>
+
+        <!-- TEXT 4 -->
+        <li
+          class="
+            shrink-0
+            whitespace-nowrap
+            font-urbanist
+            text-xs
+            sm:text-sm
+            md:text-base
+            lg:text-lg
+            leading-none
+            text-white
+          "
+        >
+          A New Generation in Fashion
+        </li>
+
+        <!-- ICON 4 -->
+        <li class="flex shrink-0 items-center justify-center">
+          <img
+            src="src/assets/images/collection-icon.svg"
+            alt=""
+            class="
+              block
+              w-6
+              h-6
+              sm:w-7
+              sm:h-7
+              md:w-8
+              md:h-8
+              lg:w-9
+              lg:h-9
+              opacity-90
+            "
+          />
+        </li>
+
+        <!-- TEXT 5 -->
+        <li
+          class="
+            shrink-0
+            whitespace-nowrap
+            font-urbanist
+            text-xs
+            sm:text-sm
+            md:text-base
+            lg:text-lg
+            leading-none
+            text-white
+          "
+        >
+          Get 40% Off on Trending Styles
+        </li>
+
+        <!-- ICON 5 -->
+        <li class="flex shrink-0 items-center justify-center">
+          <img
+            src="src/assets/images/collection-icon.svg"
+            alt=""
+            class="
+              block
+              w-6
+              h-6
+              sm:w-7
+              sm:h-7
+              md:w-8
+              md:h-8
+              lg:w-9
+              lg:h-9
+              opacity-90
+            "
+          />
+        </li>
+
+      </ul>
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- SECOND DUPLICATED TRACK -->
+    <!-- ================================================= -->
+
+    <div class="flex shrink-0 items-center">
+
+      <ul
+        class="
+          flex
+          shrink-0
+          items-center
+          gap-5
+          sm:gap-7
+          md:gap-8
+          lg:gap-10
+          px-4
+          sm:px-5
+          md:px-6
+        "
+      >
+
+        <!-- TEXT 1 -->
+        <li
+          class="
+            shrink-0
+            whitespace-nowrap
+            font-urbanist
+            text-xs
+            sm:text-sm
+            md:text-base
+            lg:text-lg
+            leading-none
+            text-white
+          "
+        >
+          Buy 2, Get 1 free on all apparel
+        </li>
+
+        <!-- ICON 1 -->
+        <li class="flex shrink-0 items-center justify-center">
+          <img
+            src="src/assets/images/collection-icon.svg"
+            alt=""
+            class="
+              block
+              w-6
+              h-6
+              sm:w-7
+              sm:h-7
+              md:w-8
+              md:h-8
+              lg:w-9
+              lg:h-9
+              opacity-90
+            "
+          />
+        </li>
+
+        <!-- TEXT 2 -->
+        <li
+          class="
+            shrink-0
+            whitespace-nowrap
+            font-urbanist
+            text-xs
+            sm:text-sm
+            md:text-base
+            lg:text-lg
+            leading-none
+            text-white
+          "
+        >
+          ELEVATE Soaring to New Heights
+        </li>
+
+        <!-- ICON 2 -->
+        <li class="flex shrink-0 items-center justify-center">
+          <img
+            src="src/assets/images/collection-icon.svg"
+            alt=""
+            class="
+              block
+              w-6
+              h-6
+              sm:w-7
+              sm:h-7
+              md:w-8
+              md:h-8
+              lg:w-9
+              lg:h-9
+              opacity-90
+            "
+          />
+        </li>
+
+        <!-- TEXT 3 -->
+        <li
+          class="
+            shrink-0
+            whitespace-nowrap
+            font-urbanist
+            text-xs
+            sm:text-sm
+            md:text-base
+            lg:text-lg
+            leading-none
+            text-white
+          "
+        >
+          Where Luxury Meets Elevation
+        </li>
+
+        <!-- ICON 3 -->
+        <li class="flex shrink-0 items-center justify-center">
+          <img
+            src="src/assets/images/collection-icon.svg"
+            alt=""
+            class="
+              block
+              w-6
+              h-6
+              sm:w-7
+              sm:h-7
+              md:w-8
+              md:h-8
+              lg:w-9
+              lg:h-9
+              opacity-90
+            "
+          />
+        </li>
+
+        <!-- TEXT 4 -->
+        <li
+          class="
+            shrink-0
+            whitespace-nowrap
+            font-urbanist
+            text-xs
+            sm:text-sm
+            md:text-base
+            lg:text-lg
+            leading-none
+            text-white
+          "
+        >
+          A New Generation in Fashion
+        </li>
+
+        <!-- ICON 4 -->
+        <li class="flex shrink-0 items-center justify-center">
+          <img
+            src="src/assets/images/collection-icon.svg"
+            alt=""
+            class="
+              block
+              w-6
+              h-6
+              sm:w-7
+              sm:h-7
+              md:w-8
+              md:h-8
+              lg:w-9
+              lg:h-9
+              opacity-90
+            "
+          />
+        </li>
+
+        <!-- TEXT 5 -->
+        <li
+          class="
+            shrink-0
+            whitespace-nowrap
+            font-urbanist
+            text-xs
+            sm:text-sm
+            md:text-base
+            lg:text-lg
+            leading-none
+            text-white
+          "
+        >
+          Get 40% Off on Trending Styles
+        </li>
+
+        <!-- ICON 5 -->
+        <li class="flex shrink-0 items-center justify-center">
+          <img
+            src="src/assets/images/collection-icon.svg"
+            alt=""
+            class="
+              block
+              w-6
+              h-6
+              sm:w-7
+              sm:h-7
+              md:w-8
+              md:h-8
+              lg:w-9
+              lg:h-9
+              opacity-90
+            "
+          />
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ===================================================== -->
+<!-- MARQUEE ANIMATION -->
+<!-- ===================================================== -->
+
+<style>
+  .marquee-track {
+    animation: elevate-marquee 28s linear infinite;
+    will-change: transform;
+  }
+
+  @keyframes elevate-marquee {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* Mobile */
+  @media (max-width: 639px) {
+    .marquee-track {
+      animation-duration: 22s;
+    }
+  }
+
+  /* Tablet */
+  @media (min-width: 640px) and (max-width: 1023px) {
+    .marquee-track {
+      animation-duration: 26s;
+    }
+  }
+
+  /* Desktop */
+  @media (min-width: 1024px) {
+    .marquee-track {
+      animation-duration: 32s;
+    }
+  }
+
+  /* Accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+      animation: none;
+    }
+  }
+</style>
+
+  </div>
+
+</section>
+
+
+<!-- ===================================================== -->
+<!-- TRENDING PRODUCTS SECTION -->
+<!-- ===================================================== -->
+<section
+  id="trending-products"
+  class="w-full bg-bark overflow-hidden"
+  aria-labelledby="trending-products-title"
+>
+  <!-- ================================================= -->
+  <!-- BRAND / LOGO STRIP -->
+  <!-- ================================================= -->
+<!-- ================================================= -->
+<!-- RESPONSIVE BRAND LOGOS -->
+<!-- Tailwind CSS ONLY -->
+<!-- ================================================= -->
+
+<div class="w-full">
+  <div
+    class="
+      mx-auto
+      grid
+      w-full
+      grid-cols-2
+      items-center
+      justify-items-center
+      gap-x-6
+      gap-y-8
+      px-4
+      pt-8
+      sm:grid-cols-3
+      sm:gap-x-8
+      sm:gap-y-10
+      sm:px-6
+      sm:pt-10
+      md:grid-cols-4
+      md:gap-x-10
+      md:gap-y-12
+      md:px-8
+      lg:grid-cols-7
+      lg:gap-x-8
+      lg:px-10
+      lg:pt-12
+      xl:gap-x-12
+      2xl:max-w-[1700px]
+      2xl:px-12
+    "
+  >
+
+    <!-- Hertag -->
+    <img
+      src="src/assets/images/brand-logo1.png"
+      alt="Hertag"
+      class="
+        h-auto
+        w-[90px]
+        max-w-full
+        object-contain
+        sm:w-[105px]
+        md:w-[115px]
+        lg:w-[120px]
+        xl:w-[135px]
+      "
+    />
+
+    <!-- Retio -->
+    <img
+      src="src/assets/images/brand-logo2.png"
+      alt="Retio"
+      class="
+        h-auto
+        w-[85px]
+        max-w-full
+        object-contain
+        sm:w-[100px]
+        md:w-[110px]
+        lg:w-[115px]
+        xl:w-[130px]
+      "
+    />
+
+    <!-- Modeni -->
+    <img
+      src="src/assets/images/brand-logo3.png"
+      alt="Modeni Fashion Shop"
+      class="
+        h-auto
+        w-[85px]
+        max-w-full
+        object-contain
+        sm:w-[100px]
+        md:w-[110px]
+        lg:w-[115px]
+        xl:w-[130px]
+      "
+    />
+
+    <!-- Uimnk -->
+    <img
+      src="src/assets/images/brand-logo4.png"
+      alt="Uimnk"
+      class="
+        h-auto
+        w-[80px]
+        max-w-full
+        object-contain
+        sm:w-[95px]
+        md:w-[105px]
+        lg:w-[110px]
+        xl:w-[125px]
+      "
+    />
+
+    <!-- Niroja -->
+    <img
+      src="src/assets/images/brand-logo5.png"
+      alt="Niroja"
+      class="
+        h-auto
+        w-[80px]
+        max-w-full
+        object-contain
+        sm:w-[95px]
+        md:w-[105px]
+        lg:w-[110px]
+        xl:w-[125px]
+      "
+    />
+
+    <!-- FUIYMN -->
+    <img
+      src="src/assets/images/brand-logo6.png"
+      alt="FUIYMN"
+      class="
+        h-auto
+        w-[85px]
+        max-w-full
+        object-contain
+        sm:w-[100px]
+        md:w-[110px]
+        lg:w-[115px]
+        xl:w-[130px]
+      "
+    />
+
+    <!-- Glaom -->
+    <img
+      src="src/assets/images/brand-logo7.png"
+      alt="Glaom"
+      class="
+        h-auto
+        w-[85px]
+        max-w-full
+        object-contain
+        sm:w-[100px]
+        md:w-[110px]
+        lg:w-[115px]
+        xl:w-[130px]
+      "
+    />
+
+  </div>
+</div>
+
+  <!-- ================================================= -->
+  <!-- SECTION HEADING -->
+  <!-- ================================================= -->
+  <div class="mx-auto mt-[88px] px-4 text-center sm:mt-[92px] lg:mt-[94px]">
+    <p class="font-urbanist text-[13px] font-medium leading-none text-gold-light sm:text-[15px]">
+      New Arrivals
+    </p>
+    <h2
+      id="trending-products-title"
+      class="
+        mt-2 font-cormorant font-semibold leading-[0.98]
+        tracking-[-0.02em] text-[#F3E3D5]
+        text-[38px] sm:text-[43px] md:text-[46px] lg:text-[48px]
+      "
+    >
+      Trending Products
+    </h2>
+  </div>
+
+  <!-- ================================================= -->
+  <!-- PRODUCT GRID -->
+  <!-- ================================================= -->
+  <div
+    id="trending-track"
+    class="
+      mx-auto mt-10 grid w-full max-w-[1625px]
+      grid-cols-1 gap-5 px-4
+      sm:grid-cols-2 sm:gap-6 sm:px-6
+      lg:grid-cols-4 lg:gap-[36px] lg:px-8
+      2xl:px-0
+    "
+  >
+    <!-- PRODUCT 1: DENIM -->
+    <article
+      class="
+        group flex min-w-0 flex-col overflow-hidden rounded-[18px]
+        border border-[#FFF3F71A] bg-bark
+        transition-transform duration-300 ease-out
+        hover:-translate-y-0.5
+        motion-reduce:transition-none
+      "
+    >
+      <div class="flex aspect-[377/430] w-full items-center justify-center overflow-hidden bg-[#261017] p-6 sm:p-7 lg:p-8">
+        <img
+          src="src/assets/images/product1.png"
+          alt="Blue wide-leg denim pants"
+          class="h-full w-full object-contain transition-transform duration-300 ease-out group-hover:scale-[1.015] motion-reduce:transition-none"
+        />
+      </div>
+
+      <div class="flex min-h-[101px] items-center justify-between gap-3 bg-bark px-6 py-4 sm:px-6 lg:px-[25px]">
+        <div class="min-w-0">
+          <h3 class="truncate font-cormorant text-[18px] font-medium leading-tight text-[#F3E3D5] sm:text-[19px]">
+            Lorem ipsum dolor sit
+          </h3>
+          <div class="mt-1 flex items-center gap-2 font-urbanist text-[14px] leading-none">
+            <span class="font-medium text-gold-light">$79.00</span>
+            <span class="text-[#A68E7C]/80 line-through">$89.00</span>
+          </div>
+        </div>
+
+        <div class="flex shrink-0 items-center overflow-hidden rounded-[6px] bg-[#261017] font-urbanist text-[11px]">
+          <button type="button" class="flex h-7 min-w-7 items-center justify-center bg-gold-light px-2 text-bark transition-colors" aria-label="Select size S">S</button>
+          <button type="button" class="flex h-7 min-w-7 items-center justify-center px-2 text-[#F3E3D5]/80 transition-colors hover:text-bark hover:bg-gold-light" aria-label="Select size M">M</button>
+          <button type="button" class="flex h-7 min-w-7 items-center justify-center px-2 text-[#F3E3D5]/80 transition-colors hover:text-bark hover:bg-gold-light" aria-label="Select size L">L</button>
+          <button type="button" class="flex h-7 min-w-7 items-center justify-center px-2 text-[#F3E3D5]/80 transition-colors hover:text-bark hover:bg-gold-light" aria-label="Select size XL">XL</button>
+        </div>
+      </div>
+
+      <div class="flex h-[50px] border-t border-[#FFF3F71A] bg-bark">
+        <button
+          type="button"
+          class="flex min-w-0 flex-1 items-center justify-center font-cormorant text-[17px] font-bold text-[#F3E3D5] transition-colors duration-200 hover:bg-[radial-gradient(50%_261.22%_at_50%_50%,#F6D995_0%,#AB8546_100%)] hover:text-bark motion-reduce:transition-none"
+        >
+          ADD TO CART
+        </button>
+        <button type="button" aria-label="Add denim pants to wishlist" class="group/heart flex w-[50px] shrink-0 items-center justify-center border-l border-[#FFF3F71A] text-[#F3E3D5]/65 transition-colors duration-200 hover:text-gold-light motion-reduce:transition-none">
+          <svg class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </button>
+      </div>
+    </article>
+
+    <!-- PRODUCT 2: HANDBAG -->
+    <article
+      class="
+        group flex min-w-0 flex-col overflow-hidden rounded-[18px]
+        border border-[#FFF3F71A] bg-bark
+        transition-transform duration-300 ease-out
+        hover:-translate-y-0.5
+        motion-reduce:transition-none
+      "
+    >
+      <!-- PRODUCT IMAGE -->
+      <div
+        class="
+          flex aspect-[377/430] w-full items-center justify-center
+          overflow-hidden bg-[#261017]
+          p-6 sm:p-7 lg:p-8
+        "
+      >
+        <img
+          src="src/assets/images/product2.png"
+          alt="Beige woven handbag"
+          class="
+            h-full w-full object-contain
+            transition-transform duration-300 ease-out
+            group-hover:scale-[1.015]
+            motion-reduce:transition-none
+          "
+        />
+      </div>
+
+      <!-- PRODUCT INFO -->
+      <div
+        class="
+          flex min-h-[101px] items-center justify-between
+          gap-3 bg-bark
+          px-6 py-4 sm:px-6 lg:px-[25px]
+        "
+      >
+        <div class="min-w-0">
+          <h3
+            class="
+              truncate font-cormorant text-[18px] font-medium
+              leading-tight text-[#F3E3D5]
+              sm:text-[19px]
+            "
+          >
+            Lorem ipsum dolor sit
+          </h3>
+
+          <div
+            class="
+              mt-1 flex items-center gap-2
+              font-urbanist text-[14px] leading-none
+            "
+          >
+            <span class="font-medium text-gold-light">$79.00</span>
+            <span class="text-[#A68E7C]/80 line-through">$89.00</span>
+          </div>
+        </div>
+
+        <!-- COLOR SWATCHES -->
+        <div class="flex shrink-0 items-center gap-[0.1rem]">
+          <button
+            type="button"
+            aria-label="Select brown color"
+            class="
+              h-6 w-7 rounded-l-md
+              border border-[#FFF3F71A]
+              bg-[#6D402C]
+            "
+          ></button>
+
+          <button
+            type="button"
+            aria-label="Select cream color"
+            class="
+              h-6 w-7
+              border border-[#FFF3F71A]
+              bg-[#F3E3D5]
+            "
+          ></button>
+
+          <button
+            type="button"
+            aria-label="Select muted brown color"
+            class="
+              h-6 w-7
+              border border-[#FFF3F71A]
+              bg-[#A68E7C]
+            "
+          ></button>
+
+          <button
+            type="button"
+            aria-label="Select olive color"
+            class="
+              h-6 w-7 rounded-r-md
+              border border-[#FFF3F71A]
+              bg-[#786D43]
+            "
+          ></button>
+        </div>
+      </div>
+
+      <!-- ACTION BAR -->
+      <div class="flex h-[50px] border-t border-[#FFF3F71A] bg-bark">
+        <button
+          type="button"
+          class="
+            flex min-w-0 flex-1 items-center justify-center
+            font-cormorant text-[17px] font-bold text-[#F3E3D5]
+            transition-colors duration-200
+            hover:bg-[radial-gradient(50%_261.22%_at_50%_50%,#F6D995_0%,#AB8546_100%)]
+            hover:text-bark
+            motion-reduce:transition-none
+          "
+        >
+          ADD TO CART
+        </button>
+
+        <button
+          type="button"
+          aria-label="Add handbag to wishlist"
+          class="
+            flex w-[50px] shrink-0 items-center justify-center
+            border-l border-[#FFF3F71A]
+            text-[#F3E3D5]/65
+            transition-colors duration-200
+            hover:text-gold-light
+            motion-reduce:transition-none
+          "
+        >
+          <svg
+            class="h-[17px] w-[17px]"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path
+              d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"
+            />
+          </svg>
+        </button>
+      </div>
+    </article>
+
+    <!-- PRODUCT 3: HANDBAG -->
+    <article
+      class="
+        group flex min-w-0 flex-col overflow-hidden rounded-[18px]
+        border border-[#FFF3F71A] bg-bark
+        transition-transform duration-300 ease-out
+        hover:-translate-y-0.5
+        motion-reduce:transition-none
+      "
+    >
+      <!-- PRODUCT IMAGE -->
+      <div
+        class="
+          flex aspect-[377/430] w-full items-center justify-center
+          overflow-hidden bg-[#261017]
+          p-6 sm:p-7 lg:p-8
+        "
+      >
+        <img
+          src="src/assets/images/product3.png"
+          alt="Beige woven handbag"
+          class="
+            h-full w-full object-contain
+            transition-transform duration-300 ease-out
+            group-hover:scale-[1.015]
+            motion-reduce:transition-none
+          "
+        />
+      </div>
+
+      <!-- PRODUCT INFO -->
+      <div
+        class="
+          flex min-h-[101px] items-center justify-between
+          gap-3 bg-bark
+          px-6 py-4 sm:px-6 lg:px-[25px]
+        "
+      >
+        <div class="min-w-0">
+          <h3
+            class="
+              truncate font-cormorant text-[18px] font-medium
+              leading-tight text-[#F3E3D5]
+              sm:text-[19px]
+            "
+          >
+            Lorem ipsum dolor sit
+          </h3>
+
+          <div
+            class="
+              mt-1 flex items-center gap-2
+              font-urbanist text-[14px] leading-none
+            "
+          >
+            <span class="font-medium text-gold-light">$79.00</span>
+            <span class="text-[#A68E7C]/80 line-through">$89.00</span>
+          </div>
+        </div>
+
+        <!-- COLOR SWATCHES -->
+        <div class="flex shrink-0 items-center gap-[0.1rem]">
+          <button
+            type="button"
+            aria-label="Select brown color"
+            class="
+              h-6 w-7 rounded-l-md
+              border border-[#FFF3F71A]
+              bg-[#6D402C]
+            "
+          ></button>
+
+          <button
+            type="button"
+            aria-label="Select cream color"
+            class="
+              h-6 w-7
+              border border-[#FFF3F71A]
+              bg-[#F3E3D5]
+            "
+          ></button>
+
+          <button
+            type="button"
+            aria-label="Select muted brown color"
+            class="
+              h-6 w-7
+              border border-[#FFF3F71A]
+              bg-[#A68E7C]
+            "
+          ></button>
+
+          <button
+            type="button"
+            aria-label="Select olive color"
+            class="
+              h-6 w-7 rounded-r-md
+              border border-[#FFF3F71A]
+              bg-[#786D43]
+            "
+          ></button>
+        </div>
+      </div>
+
+      <!-- ACTION BAR -->
+      <div class="flex h-[50px] border-t border-[#FFF3F71A] bg-bark">
+        <button
+          type="button"
+          class="
+            flex min-w-0 flex-1 items-center justify-center
+            font-cormorant text-[17px] font-medium text-[#F3E3D5]
+            transition-colors duration-200
+            hover:bg-[radial-gradient(50%_261.22%_at_50%_50%,#F6D995_0%,#AB8546_100%)]
+            hover:text-bark
+            motion-reduce:transition-none
+          "
+        >
+          ADD TO CART
+        </button>
+
+        <button
+          type="button"
+          aria-label="Add handbag to wishlist"
+          class="
+            flex w-[50px] shrink-0 items-center justify-center
+            border-l border-[#FFF3F71A]
+            text-[#F3E3D5]/65
+            transition-colors duration-200
+            hover:text-gold-light
+            motion-reduce:transition-none
+          "
+        >
+          <svg
+            class="h-[17px] w-[17px]"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path
+              d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"
+            />
+          </svg>
+        </button>
+      </div>
+    </article>
+
+    <!-- PRODUCT 4: T-SHIRT -->
+    <article
+      class="
+        group flex min-w-0 flex-col overflow-hidden rounded-[18px]
+        border border-[#FFF3F71A] bg-bark
+        transition-transform duration-300 ease-out
+        hover:-translate-y-0.5
+        motion-reduce:transition-none
+      "
+    >
+      <div class="flex aspect-[377/430] w-full items-center justify-center overflow-hidden bg-[#261017] p-6 sm:p-7 lg:p-8">
+        <img
+          src="src/assets/images/product4.png"
+          alt="Rust red short-sleeve T-shirt"
+          class="h-full w-full object-contain transition-transform duration-300 ease-out group-hover:scale-[1.015] motion-reduce:transition-none"
+        />
+      </div>
+
+      <div class="flex min-h-[101px] items-center justify-between gap-3 bg-bark px-6 py-4 sm:px-6 lg:px-[25px]">
+        <div class="min-w-0">
+          <h3 class="truncate font-cormorant text-[18px] font-medium leading-tight text-[#F3E3D5] sm:text-[19px]">
+            Lorem ipsum dolor sit
+          </h3>
+          <div class="mt-1 flex items-center gap-2 font-urbanist text-[14px] leading-none">
+            <span class="font-medium text-gold-light">$79.00</span>
+            <span class="text-[#A68E7C]/80 line-through">$89.00</span>
+          </div>
+        </div>
+
+        <div class="flex shrink-0 items-center overflow-hidden rounded-[6px] bg-[#261017] font-urbanist text-[11px]">
+          <button type="button" class="flex h-7 min-w-7 items-center justify-center bg-gold-light px-2 text-bark transition-colors" aria-label="Select size S">S</button>
+          <button type="button" class="flex h-7 min-w-7 items-center justify-center px-2 text-[#F3E3D5]/80 transition-colors hover:text-bark hover:bg-gold-light" aria-label="Select size M">M</button>
+          <button type="button" class="flex h-7 min-w-7 items-center justify-center px-2 text-[#F3E3D5]/80 transition-colors hover:text-bark hover:bg-gold-light" aria-label="Select size L">L</button>
+          <button type="button" class="flex h-7 min-w-7 items-center justify-center px-2 text-[#F3E3D5]/80 transition-colors hover:text-bark hover:bg-gold-light" aria-label="Select size XL">XL</button>
+        </div>
+      </div>
+
+      <div class="flex h-[50px] border-t border-[#FFF3F71A] bg-bark">
+        <button
+          type="button"
+          class="flex min-w-0 flex-1 items-center justify-center font-cormorant text-[17px] font-medium text-[#F3E3D5] transition-colors duration-200 hover:bg-[radial-gradient(50%_261.22%_at_50%_50%,#F6D995_0%,#AB8546_100%)] hover:text-bark motion-reduce:transition-none"
+        >
+          ADD TO CART
+        </button>
+        <button type="button" aria-label="Add T-shirt to wishlist" class="flex w-[50px] shrink-0 items-center justify-center border-l border-[#FFF3F71A] text-[#F3E3D5]/65 transition-colors duration-200 hover:text-gold-light motion-reduce:transition-none">
+          <svg class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </button>
+      </div>
+    </article>
+
+    <!-- PRODUCT 5: BAG -->
+    <article
+      class="
+        group flex min-w-0 flex-col overflow-hidden rounded-[18px]
+        border border-[#FFF3F71A] bg-bark
+        transition-transform duration-300 ease-out
+        hover:-translate-y-0.5
+        motion-reduce:transition-none
+      "
+    >
+      <div class="flex aspect-[377/430] w-full items-center justify-center overflow-hidden bg-[#261017] p-6 sm:p-7 lg:p-8">
+        <img
+          src="src/assets/images/product5.png"
+          alt="bag"
+          class="h-full w-full object-contain transition-transform duration-300 ease-out group-hover:scale-[1.015] motion-reduce:transition-none"
+        />
+      </div>
+
+      <div class="flex min-h-[101px] items-center justify-between gap-3 bg-bark px-6 py-4 sm:px-6 lg:px-[25px]">
+        <div class="min-w-0">
+          <h3 class="truncate font-cormorant text-[18px] font-medium leading-tight text-[#F3E3D5] sm:text-[19px]">
+            Lorem ipsum dolor sit
+          </h3>
+          <div class="mt-1 flex items-center gap-2 font-urbanist text-[14px] leading-none">
+            <span class="font-medium text-gold-light">$79.00</span>
+            <span class="text-[#A68E7C]/80 line-through">$89.00</span>
+          </div>
+        </div>
+
+        <div class="flex shrink-0 items-center overflow-hidden rounded-[6px] bg-[#261017] font-urbanist text-[11px]">
+          <button type="button" class="flex h-7 min-w-7 items-center justify-center bg-gold-light px-2 text-bark transition-colors" aria-label="Select size S">S</button>
+          <button type="button" class="flex h-7 min-w-7 items-center justify-center px-2 text-[#F3E3D5]/80 transition-colors hover:text-bark hover:bg-gold-light" aria-label="Select size M">M</button>
+          <button type="button" class="flex h-7 min-w-7 items-center justify-center px-2 text-[#F3E3D5]/80 transition-colors hover:text-bark hover:bg-gold-light" aria-label="Select size L">L</button>
+          <button type="button" class="flex h-7 min-w-7 items-center justify-center px-2 text-[#F3E3D5]/80 transition-colors hover:text-bark hover:bg-gold-light" aria-label="Select size XL">XL</button>
+        </div>
+      </div>
+
+      <div class="flex h-[50px] border-t border-[#FFF3F71A] bg-bark">
+        <button
+          type="button"
+          class="flex min-w-0 flex-1 items-center justify-center font-cormorant text-[17px] font-medium text-[#F3E3D5] transition-colors duration-200 hover:bg-[radial-gradient(50%_261.22%_at_50%_50%,#F6D995_0%,#AB8546_100%)] hover:text-bark motion-reduce:transition-none"
+        >
+          ADD TO CART
+        </button>
+        <button type="button" aria-label="Add bag to wishlist" class="flex w-[50px] shrink-0 items-center justify-center border-l border-[#FFF3F71A] text-[#F3E3D5]/65 transition-colors duration-200 hover:text-gold-light motion-reduce:transition-none">
+          <svg class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </button>
+      </div>
+    </article>
+
+    <!-- PRODUCT 6: MEN'S COAT -->
+    <article
+      class="
+        group flex min-w-0 flex-col overflow-hidden rounded-[18px]
+        border border-[#FFF3F71A] bg-bark
+        transition-transform duration-300 ease-out
+        hover:-translate-y-0.5
+        motion-reduce:transition-none
+      "
+    >
+      <!-- PRODUCT IMAGE -->
+      <div
+        class="
+          flex aspect-[377/430] w-full items-center justify-center
+          overflow-hidden bg-[#261017]
+          p-6 sm:p-7 lg:p-8
+        "
+      >
+        <img
+          src="src/assets/images/product6.png"
+          alt="men's coat"
+          class="
+            h-full w-full object-contain
+            transition-transform duration-300 ease-out
+            group-hover:scale-[1.015]
+            motion-reduce:transition-none
+          "
+        />
+      </div>
+
+      <!-- PRODUCT INFO -->
+      <div
+        class="
+          flex min-h-[101px] items-center justify-between
+          gap-3 bg-bark
+          px-6 py-4 sm:px-6 lg:px-[25px]
+        "
+      >
+        <div class="min-w-0">
+          <h3
+            class="
+              truncate font-cormorant text-[18px] font-medium
+              leading-tight text-[#F3E3D5]
+              sm:text-[19px]
+            "
+          >
+            Lorem ipsum dolor sit
+          </h3>
+
+          <div
+            class="
+              mt-1 flex items-center gap-2
+              font-urbanist text-[14px] leading-none
+            "
+          >
+            <span class="font-medium text-gold-light">$79.00</span>
+            <span class="text-[#A68E7C]/80 line-through">$89.00</span>
+          </div>
+        </div>
+
+        <!-- COLOR SWATCHES -->
+        <div class="flex shrink-0 items-center gap-[0.1rem]">
+          <button
+            type="button"
+            aria-label="Select brown color"
+            class="
+              h-6 w-7 rounded-l-md
+              border border-[#FFF3F71A]
+              bg-[#6D402C]
+            "
+          ></button>
+
+          <button
+            type="button"
+            aria-label="Select cream color"
+            class="
+              h-6 w-7
+              border border-[#FFF3F71A]
+              bg-[#F3E3D5]
+            "
+          ></button>
+
+          <button
+            type="button"
+            aria-label="Select muted brown color"
+            class="
+              h-6 w-7
+              border border-[#FFF3F71A]
+              bg-[#A68E7C]
+            "
+          ></button>
+
+          <button
+            type="button"
+            aria-label="Select olive color"
+            class="
+              h-6 w-7 rounded-r-md
+              border border-[#FFF3F71A]
+              bg-[#786D43]
+            "
+          ></button>
+        </div>
+      </div>
+
+      <!-- ACTION BAR -->
+      <div class="flex h-[50px] border-t border-[#FFF3F71A] bg-bark">
+        <button
+          type="button"
+          class="
+            flex min-w-0 flex-1 items-center justify-center
+            font-cormorant text-[17px] font-medium text-[#F3E3D5]
+            transition-colors duration-200
+            hover:bg-[radial-gradient(50%_261.22%_at_50%_50%,#F6D995_0%,#AB8546_100%)]
+            hover:text-bark
+            motion-reduce:transition-none
+          "
+        >
+          ADD TO CART
+        </button>
+
+        <button
+          type="button"
+          aria-label="Add coat to wishlist"
+          class="
+            flex w-[50px] shrink-0 items-center justify-center
+            border-l border-[#FFF3F71A]
+            text-[#F3E3D5]/65
+            transition-colors duration-200
+            hover:text-gold-light
+            motion-reduce:transition-none
+          "
+        >
+          <svg
+            class="h-[17px] w-[17px]"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path
+              d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"
+            />
+          </svg>
+        </button>
+      </div>
+    </article>
+
+    <!-- PRODUCT 7: T-SHIRT -->
+    <article
+      class="
+        group flex min-w-0 flex-col overflow-hidden rounded-[18px]
+        border border-[#FFF3F71A] bg-bark
+        transition-transform duration-300 ease-out
+        hover:-translate-y-0.5
+        motion-reduce:transition-none
+      "
+    >
+      <div class="flex aspect-[377/430] w-full items-center justify-center overflow-hidden bg-[#261017] p-6 sm:p-7 lg:p-8">
+        <img
+          src="src/assets/images/product7.png"
+          alt="red T-shirt"
+          class="h-full w-full object-contain transition-transform duration-300 ease-out group-hover:scale-[1.015] motion-reduce:transition-none"
+        />
+      </div>
+
+      <div class="flex min-h-[101px] items-center justify-between gap-3 bg-bark px-6 py-4 sm:px-6 lg:px-[25px]">
+        <div class="min-w-0">
+          <h3 class="truncate font-cormorant text-[18px] font-medium leading-tight text-[#F3E3D5] sm:text-[19px]">
+            Lorem ipsum dolor sit
+          </h3>
+          <div class="mt-1 flex items-center gap-2 font-urbanist text-[14px] leading-none">
+            <span class="font-medium text-gold-light">$79.00</span>
+            <span class="text-[#A68E7C]/80 line-through">$89.00</span>
+          </div>
+        </div>
+
+        <div class="flex shrink-0 items-center overflow-hidden rounded-[6px] bg-[#261017] font-urbanist text-[11px]">
+          <button type="button" class="flex h-7 min-w-7 items-center justify-center bg-gold-light px-2 text-bark transition-colors" aria-label="Select size S">S</button>
+          <button type="button" class="flex h-7 min-w-7 items-center justify-center px-2 text-[#F3E3D5]/80 transition-colors hover:text-bark hover:bg-gold-light" aria-label="Select size M">M</button>
+          <button type="button" class="flex h-7 min-w-7 items-center justify-center px-2 text-[#F3E3D5]/80 transition-colors hover:text-bark hover:bg-gold-light" aria-label="Select size L">L</button>
+          <button type="button" class="flex h-7 min-w-7 items-center justify-center px-2 text-[#F3E3D5]/80 transition-colors hover:text-bark hover:bg-gold-light" aria-label="Select size XL">XL</button>
+        </div>
+      </div>
+
+      <div class="flex h-[50px] border-t border-[#FFF3F71A] bg-bark">
+        <button
+          type="button"
+          class="flex min-w-0 flex-1 items-center justify-center font-cormorant text-[17px] font-medium text-[#F3E3D5] transition-colors duration-200 hover:bg-[radial-gradient(50%_261.22%_at_50%_50%,#F6D995_0%,#AB8546_100%)] hover:text-bark motion-reduce:transition-none"
+        >
+          ADD TO CART
+        </button>
+        <button type="button" aria-label="Add T-shirt to wishlist" class="flex w-[50px] shrink-0 items-center justify-center border-l border-[#FFF3F71A] text-[#F3E3D5]/65 transition-colors duration-200 hover:text-gold-light motion-reduce:transition-none">
+          <svg class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </button>
+      </div>
+    </article>
+
+    <!-- PRODUCT 8: WOMEN'S COAT -->
+    <article
+      class="
+        group flex min-w-0 flex-col overflow-hidden rounded-[18px]
+        border border-[#FFF3F71A] bg-bark
+        transition-transform duration-300 ease-out
+        hover:-translate-y-0.5
+        motion-reduce:transition-none
+      "
+    >
+      <div class="flex aspect-[377/430] w-full items-center justify-center overflow-hidden bg-[#261017] p-6 sm:p-7 lg:p-8">
+        <img
+          src="src/assets/images/product8.png"
+          alt="women's coat"
+          class="h-full w-full object-contain transition-transform duration-300 ease-out group-hover:scale-[1.015] motion-reduce:transition-none"
+        />
+      </div>
+
+      <div class="flex min-h-[101px] items-center justify-between gap-3 bg-bark px-6 py-4 sm:px-6 lg:px-[25px]">
+        <div class="min-w-0">
+          <h3 class="truncate font-cormorant text-[18px] font-medium leading-tight text-[#F3E3D5] sm:text-[19px]">
+            Lorem ipsum dolor sit
+          </h3>
+          <div class="mt-1 flex items-center gap-2 font-urbanist text-[14px] leading-none">
+            <span class="font-medium text-gold-light">$79.00</span>
+            <span class="text-[#A68E7C]/80 line-through">$89.00</span>
+          </div>
+        </div>
+
+        <div class="flex shrink-0 items-center overflow-hidden rounded-[6px] bg-[#261017] font-urbanist text-[11px]">
+          <button type="button" class="flex h-7 min-w-7 items-center justify-center bg-gold-light px-2 text-bark transition-colors" aria-label="Select size S">S</button>
+          <button type="button" class="flex h-7 min-w-7 items-center justify-center px-2 text-[#F3E3D5]/80 transition-colors hover:text-bark hover:bg-gold-light" aria-label="Select size M">M</button>
+          <button type="button" class="flex h-7 min-w-7 items-center justify-center px-2 text-[#F3E3D5]/80 transition-colors hover:text-bark hover:bg-gold-light" aria-label="Select size L">L</button>
+          <button type="button" class="flex h-7 min-w-7 items-center justify-center px-2 text-[#F3E3D5]/80 transition-colors hover:text-bark hover:bg-gold-light" aria-label="Select size XL">XL</button>
+        </div>
+      </div>
+
+      <div class="flex h-[50px] border-t border-[#FFF3F71A] bg-bark">
+        <button
+          type="button"
+          class="flex min-w-0 flex-1 items-center justify-center font-cormorant text-[17px] font-medium text-[#F3E3D5] transition-colors duration-200 hover:bg-[radial-gradient(50%_261.22%_at_50%_50%,#F6D995_0%,#AB8546_100%)] hover:text-bark motion-reduce:transition-none"
+        >
+          ADD TO CART
+        </button>
+        <button type="button" aria-label="Add coat to wishlist" class="flex w-[50px] shrink-0 items-center justify-center border-l border-[#FFF3F71A] text-[#F3E3D5]/65 transition-colors duration-200 hover:text-gold-light motion-reduce:transition-none">
+          <svg class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </button>
+      </div>
+    </article>
+  </div>
+
+  <div class="h-5 sm:h-6 lg:h-5"></div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- FEATURED COLLECTION / CATEGORY CARDS -->
+<!-- ================================================= -->
+<section class="w-full bg-[#16090D] px-5 py-10 sm:px-8 sm:py-12 lg:px-10 lg:py-14">
+
+  <div
+    class="
+      mx-auto flex max-w-[1600px]
+      gap-5 sm:gap-6 lg:gap-7
+      overflow-x-auto no-scrollbar
+      lg:grid lg:grid-cols-3 lg:overflow-visible
+    "
+  >
+
+    <!-- ================================================= -->
+    <!-- CARD 1: LUXURY MENSWEAR -->
+    <!-- ================================================= -->
+    <article
+      class="
+        group relative shrink-0
+        h-[500px] w-[82%]
+        overflow-hidden rounded-[22px]
+        sm:h-[580px] sm:w-[48%]
+        lg:h-[672px] lg:w-full
+        bg-[#261017]
+      "
+    >
+
+      <!-- IMAGE -->
+      <img
+        src="src/assets/images/category1.jpg"
+        alt="Luxury Menswear"
+        class="
+          absolute inset-0
+          h-full w-full
+          object-cover
+          transition-transform duration-700 ease-out
+          group-hover:scale-[1.025]
+          motion-reduce:transition-none
+        "
+      />
+
+      <!-- COLOR GRADIENT -->
+      <div
+        class="
+          absolute inset-0
+          bg-[linear-gradient(180deg,rgba(38,16,23,0)_24.53%,#261017_100%)]
+        "
+      ></div>
+
+      <!-- CONTENT -->
+      <div
+        class="
+          absolute inset-x-0 bottom-0
+          flex items-end justify-between
+          gap-5
+          p-7 sm:p-8 lg:p-9
+        "
+      >
+
+        <div class="min-w-0">
+
+          <p
+            class="
+              mb-3
+              font-urbanist
+              text-[14px] font-medium
+              text-[#F3E3D5]
+              sm:text-[15px]
+            "
+          >
+            Luxury Menswear
+          </p>
+
+          <h2
+            class="
+              max-w-[300px]
+              font-cormorant
+              text-[38px] font-medium
+              leading-[1.05]
+              text-[#FFF8F5]
+              sm:text-[43px]
+              lg:text-[46px]
+            "
+          >
+            Luxury<br />
+            Menswear
+          </h2>
+
+        </div>
+
+        <!-- ARROW -->
+        <button
+          type="button"
+          aria-label="Explore Luxury Menswear"
+          class="
+            mb-1
+            flex h-11 w-11 shrink-0
+            items-center justify-center
+            rounded-[8px]
+            bg-white
+            text-[#16090D]
+            transition-all duration-300
+            group-hover:translate-x-1
+            group-hover:bg-[#F6D995]
+            motion-reduce:transition-none
+          "
+        >
+          <svg
+            class="h-6 w-6"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M5 12h13"></path>
+            <path d="m13 6 6 6-6 6"></path>
+          </svg>
+        </button>
+
+      </div>
+    </article>
+
+
+    <!-- ================================================= -->
+    <!-- CARD 2: SIGNATURE STYLE -->
+    <!-- ================================================= -->
+    <article
+      class="
+        group relative shrink-0
+        h-[500px] w-[82%]
+        overflow-hidden rounded-[22px]
+        sm:h-[580px] sm:w-[48%]
+        lg:h-[672px] lg:w-full
+        bg-[#261017]
+      "
+    >
+
+      <!-- IMAGE -->
+      <img
+        src="src/assets/images/category2.jpg"
+        alt="Signature Style"
+        class="
+          absolute inset-0
+          h-full w-full
+          object-cover
+          transition-transform duration-700 ease-out
+          group-hover:scale-[1.025]
+          motion-reduce:transition-none
+        "
+      />
+
+      <!-- COLOR GRADIENT -->
+      <div
+        class="
+          absolute inset-0
+          bg-[linear-gradient(180deg,rgba(38,16,23,0)_24.53%,#261017_100%)]
+        "
+      ></div>
+
+      <!-- CONTENT -->
+      <div
+        class="
+          absolute inset-x-0 bottom-0
+          flex items-end justify-between
+          gap-5
+          p-7 sm:p-8 lg:p-9
+        "
+      >
+
+        <div class="min-w-0">
+
+          <p
+            class="
+              mb-3
+              font-urbanist
+              text-[14px] font-medium
+              text-[#F3E3D5]
+              sm:text-[15px]
+            "
+          >
+            Signature Style
+          </p>
+
+          <h2
+            class="
+              max-w-[300px]
+              font-cormorant
+              text-[38px] font-medium
+              leading-[1.05]
+              text-[#FFF8F5]
+              sm:text-[43px]
+              lg:text-[46px]
+            "
+          >
+            Elevate<br />
+            Your Look
+          </h2>
+
+        </div>
+
+        <!-- ARROW -->
+        <button
+          type="button"
+          aria-label="Explore Signature Style"
+          class="
+            mb-1
+            flex h-11 w-11 shrink-0
+            items-center justify-center
+            rounded-[8px]
+            bg-white
+            text-[#16090D]
+            transition-all duration-300
+            group-hover:translate-x-1
+            group-hover:bg-[#F6D995]
+            motion-reduce:transition-none
+          "
+        >
+          <svg
+            class="h-6 w-6"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M5 12h13"></path>
+            <path d="m13 6 6 6-6 6"></path>
+          </svg>
+        </button>
+
+      </div>
+    </article>
+
+
+    <!-- ================================================= -->
+    <!-- CARD 3: DEFINE YOUR ELEGANCE -->
+    <!-- ================================================= -->
+    <article
+      class="
+        group relative shrink-0
+        h-[500px] w-[82%]
+        overflow-hidden rounded-[22px]
+        sm:h-[580px] sm:w-[48%]
+        lg:h-[672px] lg:w-full
+        bg-[#261017]
+      "
+    >
+
+      <!-- IMAGE -->
+      <img
+        src="src/assets/images/category3.jpg"
+        alt="Define Your Elegance"
+        class="
+          absolute inset-0
+          h-full w-full
+          object-cover
+          transition-transform duration-700 ease-out
+          group-hover:scale-[1.025]
+          motion-reduce:transition-none
+        "
+      />
+
+      <!-- COLOR GRADIENT -->
+      <div
+        class="
+          absolute inset-0
+          bg-[linear-gradient(180deg,rgba(38,16,23,0)_24.53%,#261017_100%)]
+        "
+      ></div>
+
+      <!-- CONTENT -->
+      <div
+        class="
+          absolute inset-x-0 bottom-0
+          flex items-end justify-between
+          gap-5
+          p-7 sm:p-8 lg:p-9
+        "
+      >
+
+        <div class="min-w-0">
+
+          <p
+            class="
+              mb-3
+              font-urbanist
+              text-[14px] font-medium
+              text-[#F3E3D5]
+              sm:text-[15px]
+            "
+          >
+            Signature Style
+          </p>
+
+          <h2
+            class="
+              max-w-[350px]
+              font-cormorant
+              text-[38px] font-medium
+              leading-[1.05]
+              text-[#FFF8F5]
+              sm:text-[43px]
+              lg:text-[46px]
+            "
+          >
+            Define Your<br />
+            Elegance
+          </h2>
+
+        </div>
+
+        <!-- ARROW -->
+        <button
+          type="button"
+          aria-label="Explore Define Your Elegance"
+          class="
+            mb-1
+            flex h-11 w-11 shrink-0
+            items-center justify-center
+            rounded-[8px]
+            bg-white
+            text-[#16090D]
+            transition-all duration-300
+            group-hover:translate-x-1
+            group-hover:bg-[#F6D995]
+            motion-reduce:transition-none
+          "
+        >
+          <svg
+            class="h-6 w-6"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M5 12h13"></path>
+            <path d="m13 6 6 6-6 6"></path>
+          </svg>
+        </button>
+
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+<!-- ================================================= -->
+<!-- PRODUCT SHOWCASE / COLLECTIONS -->
+<!-- ================================================= -->
+<!-- ================================================= -->
+<!-- PRODUCT SHOWCASE / COLLECTIONS -->
+<!-- ================================================= -->
+<section
+  class="
+    w-full bg-[#16090D]
+    px-4 py-6
+    sm:px-6 sm:py-8
+    lg:px-[26px] lg:py-[20px]
+    mb-[100px]
+  "
+>
+  <div
+    class="
+      mx-auto
+      grid w-full max-w-[1700px]
+      grid-cols-1
+      gap-12
+      overflow-hidden
+      sm:grid-cols-2 sm:gap-x-[28px] sm:gap-y-12
+      lg:grid-cols-4 lg:gap-x-[27px] lg:gap-y-0
+      mt-8 sm:mt-10 lg:mt-12
+    "
+  >
+    <!-- ================================================= -->
+    <!-- COLUMN 1 — BEST SELLER -->
+    <!-- ================================================= -->
+   <div class="product-column min-w-0">
+
+      <!-- HEADER -->
+      <div class="flex h-[44px] items-center">
+
+        <h2
+          class="
+            font-cormorant
+            text-[30px]
+            font-medium
+            leading-[1]
+            tracking-[-0.01em]
+            text-[#FFF3F7]
+          "
+        >
+          Best Seller
+        </h2>
+
+        <!-- BEST SELLER ARROWS — 50px FROM HEADING -->
+        <div class="ml-[50px] flex items-center gap-[3px]">
+
+          <button
+            type="button"
+            aria-label="Previous Best Seller"
+            class="
+              flex h-[16px] w-[18px]
+              items-center justify-center
+              p-0
+              text-[#FFF3F7]
+              transition-opacity duration-100
+              hover:opacity-60
+            "
+          >
+            <svg
+              class="h-[16px] w-[18px]"
+              viewBox="0 0 18 16"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M4 8H13"
+                stroke="currentColor"
+                stroke-width="1.3"
+                stroke-linecap="round"
+              />
+              <path
+                d="M7 3L2 8L7 13"
+                stroke="currentColor"
+                stroke-width="1.3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+
+          <span
+            class="
+              font-cormorant
+              text-[16px]
+              font-medium
+              leading-none
+              text-[#FFF3F7]
+            "
+          >
+            /
+          </span>
+
+          <button
+            type="button"
+            aria-label="Next Best Seller"
+            class="
+              flex h-[16px] w-[18px]
+              items-center justify-center
+              p-0
+              text-[#FFF3F7]
+              transition-opacity duration-200
+              hover:opacity-60
+            "
+          >
+            <svg
+              class="h-[16px] w-[18px]"
+              viewBox="0 0 18 16"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M5 8H14"
+                stroke="currentColor"
+                stroke-width="1.3"
+                stroke-linecap="round"
+              />
+              <path
+                d="M11 3L16 8L11 13"
+                stroke="currentColor"
+                stroke-width="1.3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+
+        </div>
+      </div>
+
+
+      <!-- PRODUCT 1 -->
+      <article class="mt-[28px] flex items-start gap-[15px]">
+
+        <div
+          class="
+            flex h-[160px] w-[120px]
+            shrink-0 items-center justify-center
+            overflow-hidden rounded-[16px]
+            bg-[#261017]
+          "
+        >
+          <img
+            src="src/assets/images/column-product1.png"
+            alt="Brown blazer"
+            class="h-full w-full object-contain"
+          />
+        </div>
+
+        <div class="min-w-0 flex-1 pt-[18px]">
+
+          <h3
+            class="
+              truncate
+              font-cormorant
+              text-[18px]
+              font-medium
+              leading-[1]
+              text-[#FFF3F7]
+            "
+          >
+            Lorem ipsum dolor sit
+          </h3>
+
+          <div
+            class="
+              mt-[9px]
+              flex items-center gap-[10px]
+              font-urbanist
+              text-[14px]
+              leading-none
+            "
+          >
+            <span class="font-medium text-gold-light">$4.00</span>
+            <span class="text-[#FFF3F7]/60 line-through">$9.00</span>
+          </div>
+
+          <div class="mt-[18px] flex items-center gap-[8px]">
+
+            <button
+              type="button"
+              aria-label="Brown blazer variant"
+              class="
+                flex h-[24px] w-[24px]
+                items-center justify-center
+                overflow-hidden rounded-[5px]
+                border border-[#FFF3F71A]
+                bg-[#261017]
+                transition-all duration-200
+              "
+            >
+              <img
+                src="src/assets/images/mini-img1.png"
+                alt=""
+                class="h-full w-full object-contain"
+              />
+            </button>
+
+            <button
+              type="button"
+              aria-label="Dark brown blazer variant"
+              class="
+                flex h-[24px] w-[24px]
+                items-center justify-center
+                overflow-hidden rounded-[5px]
+                bg-[#261017]
+                transition-all duration-200
+              "
+            >
+              <img
+                src="src/assets/images/mini-img2.png"
+                alt=""
+                class="h-full w-full object-contain"
+              />
+            </button>
+
+          </div>
+
+          <button
+            type="button"
+            class="
+              mt-[14px]
+              border-b
+              border-[#C9A24B]
+              pb-[2px]
+              font-cormorant
+              text-[19px]
+              font-medium
+              leading-none
+              text-gold-light
+              transition-opacity
+              hover:opacity-70
+            "
+          >
+            Add to Cart
+          </button>
+
+        </div>
+      </article>
+
+
+      <!-- PRODUCT 2 -->
+      <article class="mt-[28px] flex items-start gap-[15px]">
+
+        <div
+          class="
+            flex h-[160px] w-[120px]
+            shrink-0 items-center justify-center
+            overflow-hidden rounded-[16px]
+            bg-[#261017]
+          "
+        >
+          <img
+            src="src/assets/images/column-product2.png"
+            alt="Brown blazer"
+            class="h-full w-full object-contain"
+          />
+        </div>
+
+        <div class="min-w-0 flex-1 pt-[18px]">
+
+          <h3
+            class="
+              truncate
+              font-cormorant
+              text-[18px]
+              font-medium
+              leading-[1]
+              text-[#FFF3F7]
+            "
+          >
+            Lorem ipsum dolor sit
+          </h3>
+
+          <div
+            class="
+              mt-[9px]
+              flex items-center gap-[10px]
+              font-urbanist
+              text-[14px]
+              leading-none
+            "
+          >
+            <span class="font-medium text-gold-light">$4.00</span>
+            <span class="text-[#FFF3F7]/60 line-through">$9.00</span>
+          </div>
+
+          <div class="mt-[18px] flex items-center gap-[8px]">
+
+            <button
+              type="button"
+              aria-label="Brown blazer variant"
+              class="
+                flex h-[24px] w-[24px]
+                items-center justify-center
+                overflow-hidden rounded-[5px]
+                border border-[#FFF3F71A]
+                bg-[#261017]
+                transition-all duration-200
+              "
+            >
+              <img
+                src="src/assets/images/mini-product3.png"
+                alt=""
+                class="h-full w-full object-contain"
+              />
+            </button>
+
+            <button
+              type="button"
+              aria-label="Dark brown blazer variant"
+              class="
+                flex h-[24px] w-[24px]
+                items-center justify-center
+                overflow-hidden rounded-[5px]
+                bg-[#261017]
+                transition-all duration-200
+              "
+            >
+              <img
+                src="src/assets/images/mini-product4.png"
+                alt=""
+                class="h-full w-full object-contain"
+              />
+            </button>
+
+          </div>
+
+          <button
+            type="button"
+            class="
+              mt-[14px]
+              border-b
+              border-[#C9A24B]
+              pb-[2px]
+              font-cormorant
+              text-[19px]
+              font-medium
+              leading-none
+              text-gold-light
+              transition-opacity
+              hover:opacity-70
+            "
+          >
+            Add to Cart
+          </button>
+
+        </div>
+      </article>
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- COLUMN 2 — POPULAR PRODUCT -->
+    <!-- ================================================= -->
+  <div class="product-column min-w-0">
+
+      <!-- HEADER -->
+      <div class="flex h-[44px] items-center">
+
+        <h2
+          class="
+            font-cormorant
+            text-[30px]
+            font-medium
+            leading-[1]
+            tracking-[-0.01em]
+            text-[#FFF3F7]
+          "
+        >
+          Popular Product
+        </h2>
+
+        <!-- POPULAR PRODUCT ARROWS — 50px FROM HEADING -->
+        <div class="pl-[50px] flex items-center gap-[3px]">
+
+          <button
+            type="button"
+            aria-label="Previous Product"
+            class="
+              flex h-[16px] w-[18px]
+              items-center justify-center
+              p-0
+              text-[#FFF3F7]
+              transition-opacity duration-100
+              hover:opacity-60
+            "
+          >
+            <svg
+              class="h-[16px] w-[18px]"
+              viewBox="0 0 18 16"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M4 8H13"
+                stroke="currentColor"
+                stroke-width="1.3"
+                stroke-linecap="round"
+              />
+              <path
+                d="M7 3L2 8L7 13"
+                stroke="currentColor"
+                stroke-width="1.3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+
+          <span
+            class="
+              font-cormorant
+              text-[16px]
+              font-medium
+              leading-none
+              text-[#FFF3F7]
+            "
+          >
+            /
+          </span>
+
+          <button
+            type="button"
+            aria-label="Next Product"
+            class="
+              flex h-[16px] w-[18px]
+              items-center justify-center
+              p-0
+              text-[#FFF3F7]
+              transition-opacity duration-200
+              hover:opacity-60
+            "
+          >
+            <svg
+              class="h-[16px] w-[18px]"
+              viewBox="0 0 18 16"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M5 8H14"
+                stroke="currentColor"
+                stroke-width="1.3"
+                stroke-linecap="round"
+              />
+              <path
+                d="M11 3L16 8L11 13"
+                stroke="currentColor"
+                stroke-width="1.3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+
+        </div>
+      </div>
+
+
+      <!-- PRODUCT 1 -->
+      <article class="mt-[28px] flex items-start gap-[15px]">
+
+        <div
+          class="
+            flex h-[160px] w-[120px]
+            shrink-0 items-center justify-center
+            overflow-hidden rounded-[16px]
+            bg-[#261017]
+          "
+        >
+          <img
+            src="src/assets/images/column-product3.png"
+            alt="Brown blazer"
+            class="h-full w-full object-contain"
+          />
+        </div>
+
+        <div class="min-w-0 flex-1 pt-[18px]">
+
+          <h3
+            class="
+              truncate
+              font-cormorant
+              text-[18px]
+              font-medium
+              leading-[1]
+              text-[#FFF3F7]
+            "
+          >
+            Lorem ipsum dolor sit
+          </h3>
+
+          <div
+            class="
+              mt-[9px]
+              flex items-center gap-[10px]
+              font-urbanist
+              text-[14px]
+              leading-none
+            "
+          >
+            <span class="font-medium text-gold-light">$4.00</span>
+            <span class="text-[#FFF3F7]/60 line-through">$9.00</span>
+          </div>
+
+          <div class="mt-[18px] flex items-center gap-[8px]">
+
+            <button
+              type="button"
+              aria-label="Brown blazer variant"
+              class="
+                flex h-[24px] w-[24px]
+                items-center justify-center
+                overflow-hidden rounded-[5px]
+                border border-[#FFF3F71A]
+                bg-[#261017]
+                transition-all duration-200
+              "
+            >
+              <img
+                src="src/assets/images/mini-product5.png"
+                alt=""
+                class="h-full w-full object-contain"
+              />
+            </button>
+
+            <button
+              type="button"
+              aria-label="Dark brown blazer variant"
+              class="
+                flex h-[24px] w-[24px]
+                items-center justify-center
+                overflow-hidden rounded-[5px]
+                bg-[#261017]
+                transition-all duration-200
+              "
+            >
+              <img
+                src="src/assets/images/mini-product6.png"
+                alt=""
+                class="h-full w-full object-contain"
+              />
+            </button>
+
+          </div>
+
+          <button
+            type="button"
+            class="
+              mt-[14px]
+              border-b
+              border-[#C9A24B]
+              pb-[2px]
+              font-cormorant
+              text-[19px]
+              font-medium
+              leading-none
+              text-gold-light
+              transition-opacity
+              hover:opacity-70
+            "
+          >
+            Add to Cart
+          </button>
+
+        </div>
+      </article>
+
+
+      <!-- PRODUCT 2 -->
+      <article class="mt-[28px] flex items-start gap-[15px]">
+
+        <div
+          class="
+            flex h-[160px] w-[120px]
+            shrink-0 items-center justify-center
+            overflow-hidden rounded-[16px]
+            bg-[#261017]
+          "
+        >
+          <img
+            src="src/assets/images/column-product4.png"
+            alt="Brown blazer"
+            class="h-full w-full object-contain"
+          />
+        </div>
+
+        <div class="min-w-0 flex-1 pt-[18px]">
+
+          <h3
+            class="
+              truncate
+              font-cormorant
+              text-[18px]
+              font-medium
+              leading-[1]
+              text-[#FFF3F7]
+            "
+          >
+            Lorem ipsum dolor sit
+          </h3>
+
+          <div
+            class="
+              mt-[9px]
+              flex items-center gap-[10px]
+              font-urbanist
+              text-[14px]
+              leading-none
+            "
+          >
+            <span class="font-medium text-gold-light">$4.00</span>
+            <span class="text-[#FFF3F7]/60 line-through">$9.00</span>
+          </div>
+
+          <div class="mt-[18px] flex items-center gap-[8px]">
+
+            <button
+              type="button"
+              aria-label="Brown blazer variant"
+              class="
+                flex h-[24px] w-[24px]
+                items-center justify-center
+                overflow-hidden rounded-[5px]
+                border border-[#FFF3F71A]
+                bg-[#261017]
+                transition-all duration-200
+              "
+            >
+              <img
+                src="src/assets/images/mini-product7.png"
+                alt=""
+                class="h-full w-full object-contain"
+              />
+            </button>
+
+            <button
+              type="button"
+              aria-label="Dark brown blazer variant"
+              class="
+                flex h-[24px] w-[24px]
+                items-center justify-center
+                overflow-hidden rounded-[5px]
+                bg-[#261017]
+                transition-all duration-200
+              "
+            >
+              <img
+                src="src/assets/images/mini-product8.png"
+                alt=""
+                class="h-full w-full object-contain"
+              />
+            </button>
+
+          </div>
+
+          <button
+            type="button"
+            class="
+              mt-[14px]
+              border-b
+              border-[#C9A24B]
+              pb-[2px]
+              font-cormorant
+              text-[19px]
+              font-medium
+              leading-none
+              text-gold-light
+              transition-opacity
+              hover:opacity-70
+            "
+          >
+            Add to Cart
+          </button>
+
+        </div>
+      </article>
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- COLUMN 3 — SPECIAL PRODUCT -->
+    <!-- ================================================= -->
+   <div class="product-column min-w-0">
+
+      <!-- HEADER -->
+      <div class="flex h-[44px] items-center">
+
+        <h2
+          class="
+            font-cormorant
+            text-[30px]
+            font-medium
+            leading-[1]
+            tracking-[-0.01em]
+            text-[#FFF3F7]
+          "
+        >
+          Special Product
+        </h2>
+
+        <!-- SPECIAL PRODUCT ARROWS — 50px FROM HEADING -->
+        <div class="ml-[50px] flex items-center gap-[3px]">
+
+          <button
+            type="button"
+            aria-label="Previous Product"
+            class="
+              flex h-[16px] w-[18px]
+              items-center justify-center
+              p-0
+              text-[#FFF3F7]
+              transition-opacity duration-100
+              hover:opacity-60
+            "
+          >
+            <svg
+              class="h-[16px] w-[18px]"
+              viewBox="0 0 18 16"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M4 8H13"
+                stroke="currentColor"
+                stroke-width="1.3"
+                stroke-linecap="round"
+              />
+              <path
+                d="M7 3L2 8L7 13"
+                stroke="currentColor"
+                stroke-width="1.3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+
+          <span
+            class="
+              font-cormorant
+              text-[16px]
+              font-medium
+              leading-none
+              text-[#FFF3F7]
+            "
+          >
+            /
+          </span>
+
+          <button
+            type="button"
+            aria-label="Next Product"
+            class="
+              flex h-[16px] w-[18px]
+              items-center justify-center
+              p-0
+              text-[#FFF3F7]
+              transition-opacity duration-200
+              hover:opacity-60
+            "
+          >
+            <svg
+              class="h-[16px] w-[18px]"
+              viewBox="0 0 18 16"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M5 8H14"
+                stroke="currentColor"
+                stroke-width="1.3"
+                stroke-linecap="round"
+              />
+              <path
+                d="M11 3L16 8L11 13"
+                stroke="currentColor"
+                stroke-width="1.3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+
+        </div>
+      </div>
+
+
+      <!-- PRODUCT 1 -->
+      <article class="mt-[28px] flex items-start gap-[15px]">
+
+        <div
+          class="
+            flex h-[160px] w-[120px]
+            shrink-0 items-center justify-center
+            overflow-hidden rounded-[16px]
+            bg-[#261017]
+          "
+        >
+          <img
+            src="src/assets/images/column-product5.png"
+            alt="Brown blazer"
+            class="h-full w-full object-contain"
+          />
+        </div>
+
+        <div class="min-w-0 flex-1 pt-[18px]">
+
+          <h3
+            class="
+              truncate
+              font-cormorant
+              text-[18px]
+              font-medium
+              leading-[1]
+              text-[#FFF3F7]
+            "
+          >
+            Lorem ipsum dolor sit
+          </h3>
+
+          <div
+            class="
+              mt-[9px]
+              flex items-center gap-[10px]
+              font-urbanist
+              text-[14px]
+              leading-none
+            "
+          >
+            <span class="font-medium text-gold-light">$4.00</span>
+            <span class="text-[#FFF3F7]/60 line-through">$9.00</span>
+          </div>
+
+          <div class="mt-[18px] flex items-center gap-[8px]">
+
+            <button
+              type="button"
+              aria-label="Brown blazer variant"
+              class="
+                flex h-[24px] w-[24px]
+                items-center justify-center
+                overflow-hidden rounded-[5px]
+                border border-[#FFF3F71A]
+                bg-[#261017]
+                transition-all duration-200
+              "
+            >
+              <img
+                src="src/assets/images/mini-product9.png"
+                alt=""
+                class="h-full w-full object-contain"
+              />
+            </button>
+
+            <button
+              type="button"
+              aria-label="Dark brown blazer variant"
+              class="
+                flex h-[24px] w-[24px]
+                items-center justify-center
+                overflow-hidden rounded-[5px]
+                bg-[#261017]
+                transition-all duration-200
+              "
+            >
+              <img
+                src="src/assets/images/mini-product10.png"
+                alt=""
+                class="h-full w-full object-contain"
+              />
+            </button>
+
+          </div>
+
+          <button
+            type="button"
+            class="
+              mt-[14px]
+              border-b
+              border-[#C9A24B]
+              pb-[2px]
+              font-cormorant
+              text-[19px]
+              font-medium
+              leading-none
+              text-gold-light
+              transition-opacity
+              hover:opacity-70
+            "
+          >
+            Add to Cart
+          </button>
+
+        </div>
+      </article>
+
+
+      <!-- PRODUCT 2 -->
+      <article class="mt-[28px] flex items-start gap-[15px]">
+
+        <div
+          class="
+            flex h-[160px] w-[120px]
+            shrink-0 items-center justify-center
+            overflow-hidden rounded-[16px]
+            bg-[#261017]
+          "
+        >
+          <img
+            src="src/assets/images/column-product6.png"
+            alt="Brown blazer"
+            class="h-full w-full object-contain"
+          />
+        </div>
+
+        <div class="min-w-0 flex-1 pt-[18px]">
+
+          <h3
+            class="
+              truncate
+              font-cormorant
+              text-[18px]
+              font-medium
+              leading-[1]
+              text-[#FFF3F7]
+            "
+          >
+            Lorem ipsum dolor sit
+          </h3>
+
+          <div
+            class="
+              mt-[9px]
+              flex items-center gap-[10px]
+              font-urbanist
+              text-[14px]
+              leading-none
+            "
+          >
+            <span class="font-medium text-gold-light">$4.00</span>
+            <span class="text-[#FFF3F7]/60 line-through">$9.00</span>
+          </div>
+
+          <div class="mt-[18px] flex items-center gap-[8px]">
+
+            <button
+              type="button"
+              aria-label="Brown blazer variant"
+              class="
+                flex h-[24px] w-[24px]
+                items-center justify-center
+                overflow-hidden rounded-[5px]
+                border border-[#FFF3F71A]
+                bg-[#261017]
+                transition-all duration-200
+              "
+            >
+              <img
+                src="src/assets/images/mini-product11.png"
+                alt=""
+                class="h-full w-full object-contain"
+              />
+            </button>
+
+            <button
+              type="button"
+              aria-label="Dark brown blazer variant"
+              class="
+                flex h-[24px] w-[24px]
+                items-center justify-center
+                overflow-hidden rounded-[5px]
+                bg-[#261017]
+                transition-all duration-200
+              "
+            >
+              <img
+                src="src/assets/images/mini-product12.png"
+                alt=""
+                class="h-full w-full object-contain"
+              />
+            </button>
+
+          </div>
+
+          <button
+            type="button"
+            class="
+              mt-[14px]
+              border-b
+              border-[#C9A24B]
+              pb-[2px]
+              font-cormorant
+              text-[19px]
+              font-medium
+              leading-none
+              text-gold-light
+              transition-opacity
+              hover:opacity-70
+            "
+          >
+            Add to Cart
+          </button>
+
+        </div>
+      </article>
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- COLUMN 4 — NEW LOOK -->
+    <!-- ================================================= -->
+   <div class="product-column min-w-0">
+
+      <!-- HEADER -->
+      <div class="flex h-[44px] items-center">
+
+        <h2
+          class="
+            font-cormorant
+            text-[30px]
+            font-medium
+            leading-[1]
+            tracking-[-0.01em]
+            text-[#FFF3F7]
+          "
+        >
+          New Look
+        </h2>
+
+        <!-- NEW LOOK ARROWS — 50px FROM HEADING -->
+        <div class="ml-[50px] flex items-center gap-[3px]">
+
+          <button
+            type="button"
+            aria-label="Previous Product"
+            class="
+              flex h-[16px] w-[18px]
+              items-center justify-center
+              p-0
+              text-[#FFF3F7]
+              transition-opacity duration-100
+              hover:opacity-60
+            "
+          >
+            <svg
+              class="h-[16px] w-[18px]"
+              viewBox="0 0 18 16"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M4 8H13"
+                stroke="currentColor"
+                stroke-width="1.3"
+                stroke-linecap="round"
+              />
+              <path
+                d="M7 3L2 8L7 13"
+                stroke="currentColor"
+                stroke-width="1.3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+
+          <span
+            class="
+              font-cormorant
+              text-[16px]
+              font-medium
+              leading-none
+              text-[#FFF3F7]
+            "
+          >
+            /
+          </span>
+
+          <button
+            type="button"
+            aria-label="Next Product"
+            class="
+              flex h-[16px] w-[18px]
+              items-center justify-center
+              p-0
+              text-[#FFF3F7]
+              transition-opacity duration-200
+              hover:opacity-60
+            "
+          >
+            <svg
+              class="h-[16px] w-[18px]"
+              viewBox="0 0 18 16"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M5 8H14"
+                stroke="currentColor"
+                stroke-width="1.3"
+                stroke-linecap="round"
+              />
+              <path
+                d="M11 3L16 8L11 13"
+                stroke="currentColor"
+                stroke-width="1.3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+
+        </div>
+      </div>
+
+
+      <!-- PRODUCT 1 -->
+      <article class="mt-[28px] flex items-start gap-[15px]">
+
+        <div
+          class="
+            flex h-[160px] w-[120px]
+            shrink-0 items-center justify-center
+            overflow-hidden rounded-[16px]
+            bg-[#261017]
+          "
+        >
+          <img
+            src="src/assets/images/column-product7.png"
+            alt="Brown blazer"
+            class="h-full w-full object-contain"
+          />
+        </div>
+
+        <div class="min-w-0 flex-1 pt-[18px]">
+
+          <h3
+            class="
+              truncate
+              font-cormorant
+              text-[18px]
+              font-medium
+              leading-[1]
+              text-[#FFF3F7]
+            "
+          >
+            Lorem ipsum dolor sit
+          </h3>
+
+          <div
+            class="
+              mt-[9px]
+              flex items-center gap-[10px]
+              font-urbanist
+              text-[14px]
+              leading-none
+            "
+          >
+            <span class="font-medium text-gold-light">$4.00</span>
+            <span class="text-[#FFF3F7]/60 line-through">$9.00</span>
+          </div>
+
+          <div class="mt-[18px] flex items-center gap-[8px]">
+
+            <button
+              type="button"
+              aria-label="Brown blazer variant"
+              class="
+                flex h-[24px] w-[24px]
+                items-center justify-center
+                overflow-hidden rounded-[5px]
+                border border-[#FFF3F71A]
+                bg-[#261017]
+                transition-all duration-200
+              "
+            >
+              <img
+                src="src/assets/images/mini-product14.png"
+                alt=""
+                class="h-full w-full object-contain"
+              />
+            </button>
+
+            <button
+              type="button"
+              aria-label="Dark brown blazer variant"
+              class="
+                flex h-[24px] w-[24px]
+                items-center justify-center
+                overflow-hidden rounded-[5px]
+                bg-[#261017]
+                transition-all duration-200
+              "
+            >
+              <img
+                src="src/assets/images/mini-product15.png"
+                alt=""
+                class="h-full w-full object-contain"
+              />
+            </button>
+
+          </div>
+
+          <button
+            type="button"
+            class="
+              mt-[14px]
+              border-b
+              border-[#C9A24B]
+              pb-[2px]
+              font-cormorant
+              text-[19px]
+              font-medium
+              leading-none
+              text-gold-light
+              transition-opacity
+              hover:opacity-70
+            "
+          >
+            Add to Cart
+          </button>
+
+        </div>
+      </article>
+
+
+      <!-- PRODUCT 2 -->
+      <article class="mt-[28px] flex items-start gap-[15px]">
+
+        <div
+          class="
+            flex h-[160px] w-[120px]
+            shrink-0 items-center justify-center
+            overflow-hidden rounded-[16px]
+            bg-[#261017]
+          "
+        >
+          <img
+            src="src/assets/images/column-product8.png"
+            alt="Brown blazer"
+            class="h-full w-full object-contain"
+          />
+        </div>
+
+        <div class="min-w-0 flex-1 pt-[18px]">
+
+          <h3
+            class="
+              truncate
+              font-cormorant
+              text-[18px]
+              font-medium
+              leading-[1]
+              text-[#FFF3F7]
+            "
+          >
+            Lorem ipsum dolor sit
+          </h3>
+
+          <div
+            class="
+              mt-[9px]
+              flex items-center gap-[10px]
+              font-urbanist
+              text-[14px]
+              leading-none
+            "
+          >
+            <span class="font-medium text-gold-light">$4.00</span>
+            <span class="text-[#FFF3F7]/60 line-through">$9.00</span>
+          </div>
+
+          <div class="mt-[18px] flex items-center gap-[8px]">
+
+            <button
+              type="button"
+              aria-label="Brown blazer variant"
+              class="
+                flex h-[24px] w-[24px]
+                items-center justify-center
+                overflow-hidden rounded-[5px]
+                border border-[#FFF3F71A]
+                bg-[#261017]
+                transition-all duration-200
+              "
+            >
+              <img
+                src="src/assets/images/mini-product16.png"
+                alt=""
+                class="h-full w-full object-contain"
+              />
+            </button>
+
+            <button
+              type="button"
+              aria-label="Dark brown blazer variant"
+              class="
+                flex h-[24px] w-[24px]
+                items-center justify-center
+                overflow-hidden rounded-[5px]
+                bg-[#261017]
+                transition-all duration-200
+              "
+            >
+              <img
+                src="src/assets/images/mini-product17.png"
+                alt=""
+                class="h-full w-full object-contain"
+              />
+            </button>
+
+          </div>
+
+          <button
+            type="button"
+            class="
+              mt-[14px]
+              border-b
+              border-[#C9A24B]
+              pb-[2px]
+              font-cormorant
+              text-[19px]
+              font-medium
+              leading-none
+              text-gold-light
+              transition-opacity
+              hover:opacity-70
+            "
+          >
+            Add to Cart
+          </button>
+
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+<!-- ===================================================== -->
+<!-- TESTIMONIALS -->
+<!-- ===================================================== -->
+
+<section
+  id="testimonials"
+  class="
+    relative w-full overflow-hidden
+    bg-panel
+    py-16
+    sm:py-20
+    lg:py-24
+  "
+>
+
+  <!-- ================================================= -->
+  <!-- HERO IMAGE BACKGROUND -->
+  <!-- ================================================= -->
+
+  <div
+    class="
+      pointer-events-none
+      absolute inset-0
+      z-0
+      bg-cover
+      bg-center
+      bg-no-repeat
+      opacity-70
+    "
+    style="
+      background-image:
+        linear-gradient(
+          to bottom,
+          rgba(22, 9, 13, 0),
+          rgba(22, 9, 13, 0)
+        ),
+        url('src/assets/images/testimonial-hero.jpg');
+    "
+    aria-hidden="true"
+  ></div>
+
+
+  <!-- ================================================= -->
+  <!-- SOFT GOLD HERO GLOW -->
+  <!-- ================================================= -->
+
+ 
+
+
+  <!-- ================================================= -->
+  <!-- WORLD MAP -->
+  <!-- ================================================= -->
+
+<div
+  class="
+    pointer-events-none
+    absolute
+    left-1/2
+    top-1/2
+    z-[2]
+    h-[95%]
+    w-[99%]
+    max-h-[680px]
+    max-w-[1300px]
+    -translate-x-1/2
+    -translate-y-1/2
+    bg-contain
+    bg-center
+    bg-no-repeat
+    opacity-[0.08]
+    mt-[-150px]
+    ml-[-20px]
+  "
+  style="
+    background-image:
+      linear-gradient(
+        rgba(22, 9, 13, 0.644),
+        rgba(22, 9, 13, 0.568)
+      ),
+      url('src/assets/images/hero2.png');
+  "
+  aria-hidden="true"
+></div>
+
+
+  <!-- ================================================= -->
+  <!-- ORBIT STAGE -->
+  <!-- ================================================= -->
+
+  <div
+    id="orbit-stage"
+    class="
+      relative
+      z-10
+      mx-auto
+      max-w-[1700px]
+      min-h-[420px]
+      px-4
+      sm:min-h-[520px]
+      lg:min-h-[700px]
+    "
+  >
+
+    <!-- ================================================= -->
+    <!-- FLOATING AVATAR 1 -->
+    <!-- ================================================= -->
+
+    <button
+      type="button"
+      data-avatar="1"
+      aria-label="Show testimonial from James Whitfield"
+      class="
+        group
+        absolute
+        left-[1%]
+        top-[46%]
+        hidden
+        h-[82px]
+        w-[82px]
+        -translate-y-1/2
+        items-center
+        justify-center
+        overflow-hidden
+        rounded-full
+        border
+        border-hairline
+        bg-card
+        transition-all
+        duration-300
+        hover:-translate-y-[calc(50%+4px)]
+        hover:scale-105
+        hover:shadow-[0_0_30px_rgba(246,217,149,0.18)]
+        lg:flex
+      "
+    >
+      <img
+        src="src/assets/images/person1.jpg"
+        alt=""
+        class="h-full w-full object-cover"
+      />
+    </button>
+
+
+    <!-- ================================================= -->
+    <!-- FLOATING AVATAR 2 -->
+    <!-- ================================================= -->
+
+    <button
+      type="button"
+      data-avatar="2"
+      aria-label="Show testimonial from Elena Brooks"
+      class="
+        absolute
+        left-[18%]
+        top-[28%]
+        hidden
+        h-[64px]
+        w-[64px]
+        -translate-y-1/2
+        items-center
+        justify-center
+        overflow-hidden
+        rounded-full
+        border
+        border-hairline
+        bg-card
+        transition-all
+        duration-300
+        hover:-translate-y-[calc(50%+4px)]
+        hover:scale-105
+        hover:shadow-[0_0_30px_rgba(246,217,149,0.18)]
+        lg:flex
+      "
+    >
+      <img
+        src="src/assets/images/person2.png"
+        alt=""
+        class="h-full w-full object-cover"
+      />
+    </button>
+
+
+    <!-- ================================================= -->
+    <!-- FLOATING AVATAR 3 -->
+    <!-- ================================================= -->
+
+    <button
+      type="button"
+      data-avatar="3"
+      aria-label="Show testimonial from Daniel Cruz"
+      class="
+        absolute
+        left-[14.5%]
+        top-[70%]
+        hidden
+        h-[68px]
+        w-[68px]
+        -translate-y-1/2
+        items-center
+        justify-center
+        overflow-hidden
+        rounded-full
+        border
+        border-hairline
+        bg-card
+        transition-all
+        duration-300
+        hover:-translate-y-[calc(50%+4px)]
+        hover:scale-105
+        hover:shadow-[0_0_30px_rgba(246,217,149,0.18)]
+        lg:flex
+      "
+    >
+      <img
+        src="src/assets/images/person3.jpg"
+        alt=""
+        class="h-full w-full object-cover"
+      />
+    </button>
+
+
+    <!-- ================================================= -->
+    <!-- FLOATING AVATAR 4 -->
+    <!-- ================================================= -->
+
+    <button
+      type="button"
+      data-avatar="4"
+      aria-label="Show testimonial from Sofia Marchetti"
+      class="
+        absolute
+        right-[9.5%]
+        top-[40%]
+        hidden
+        h-[78px]
+        w-[78px]
+        -translate-y-1/2
+        items-center
+        justify-center
+        overflow-hidden
+        rounded-full
+        border
+        border-hairline
+        bg-card
+        transition-all
+        duration-300
+        hover:-translate-y-[calc(50%+4px)]
+        hover:scale-105
+        hover:shadow-[0_0_30px_rgba(246,217,149,0.18)]
+        lg:flex
+      "
+    >
+      <img
+        src="src/assets/images/person4.jpg"
+        alt=""
+        class="h-full w-full object-cover"
+      />
+    </button>
+
+
+    <!-- ================================================= -->
+    <!-- FLOATING AVATAR 5 -->
+    <!-- ================================================= -->
+
+    <button
+      type="button"
+      data-avatar="5"
+      aria-label="Show testimonial from Marcus Webb"
+      class="
+        absolute
+        right-[1%]
+        top-[55%]
+        hidden
+        h-[76px]
+        w-[76px]
+        -translate-y-1/2
+        items-center
+        justify-center
+        overflow-hidden
+        rounded-full
+        border
+        border-hairline
+        bg-card
+        transition-all
+        duration-300
+        hover:-translate-y-[calc(50%+4px)]
+        hover:scale-105
+        hover:shadow-[0_0_30px_rgba(246,217,149,0.18)]
+        lg:flex
+      "
+    >
+      <img
+        src="src/assets/images/person5.jpg"
+        alt=""
+        class="h-full w-full object-cover"
+      />
+    </button>
+
+
+    <!-- ================================================= -->
+    <!-- FLOATING AVATAR 6 -->
+    <!-- ================================================= -->
+
+    <button
+      type="button"
+      data-avatar="6"
+      aria-label="Show testimonial from Priya Nair"
+      class="
+        absolute
+        right-[9%]
+        top-[70%]
+        hidden
+        h-[78px]
+        w-[78px]
+        -translate-y-1/2
+        items-center
+        justify-center
+        overflow-hidden
+        rounded-full
+        border
+        border-hairline
+        bg-card
+        transition-all
+        duration-300
+        hover:-translate-y-[calc(50%+4px)]
+        hover:scale-105
+        hover:shadow-[0_0_30px_rgba(246,217,149,0.18)]
+        lg:flex
+      "
+    >
+      <img
+        src="src/assets/images/person6.jpg"
+        alt=""
+        class="h-full w-full object-cover"
+      />
+    </button>
+
+
+    <!-- ================================================= -->
+    <!-- CENTER CONTENT -->
+    <!-- ================================================= -->
+
+    <div
+      class="
+        relative
+        z-20
+        mx-auto
+        flex
+        max-w-2xl
+        flex-col
+        items-center
+        px-2
+        pt-2
+        text-center
+        lg:pt-10
+        mt-[-50px]
+      "
+    >
+
+      <!-- LABEL -->
+
+      <p
+        class="
+          font-urbanist
+          text-[13px]
+          font-medium
+          text-gold-light
+          sm:text-[15px]
+        "
+      >
+        Testimonials
+      </p>
+
+
+      <!-- HEADING -->
+
+      <h2
+        class="
+          mt-2
+          font-cormorant
+          text-[32px]
+          font-medium
+          leading-[1.1]
+          text-white
+          xs:text-[36px]
+          sm:text-[44px]
+          md:text-[50px]
+          lg:text-[52px]
+        "
+      >
+        What Our Clients Say
+        <br class="hidden sm:block" />
+        About Us
+      </h2>
+
+
+      <!-- ================================================= -->
+      <!-- CENTER AVATAR -->
+      <!-- ================================================= -->
+
+      <div
+        class="
+          mt-9
+          flex
+          h-[128px]
+          w-[128px]
+          items-center
+          justify-center
+          rounded-full
+          bg-[conic-gradient(from_0deg,#F6D995,#AB8546,#F6D995)]
+          p-[6px]
+          
+          sm:mt-10
+          sm:h-[140px]
+          sm:w-[140px]
+        "
+      >
+
+        <div
+          class="
+            h-full
+            w-full
+            overflow-hidden
+            rounded-full
+            bg-card
+          "
+        >
+          <img
+            id="center-avatar"
+            src="src/assets/images/person7.jpg"
+            alt="Michael Anderson"
+            class="
+              h-full
+              w-full
+              object-cover
+            "
+          />
+        </div>
+
+      </div>
+
+
+      <!-- ================================================= -->
+      <!-- QUOTE -->
+      <!-- ================================================= -->
+
+      <p
+        id="testimonial-quote"
+        class="
+          mt-8
+          font-urbanist
+          text-[15px]
+          leading-relaxed
+          text-white/55
+          sm:mt-9
+          sm:text-[16px]
+          md:text-[17px]
+        "
+      >
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+        quae ab illo inventore veritatis et quasi architecto beatae vitae
+        dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+        aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+        eos qui ratione voluptatem
+      </p>
+
+
+      <!-- ================================================= -->
+      <!-- NAME -->
+      <!-- ================================================= -->
+
+      <h3
+        id="testimonial-name"
+        class="
+          mt-7
+          font-cormorant
+          text-[24px]
+          font-semibold
+          text-white
+          sm:text-[26px]
+        "
+      >
+        Michael Anderson
+      </h3>
+
+
+      <!-- ================================================= -->
+      <!-- ROLE -->
+      <!-- ================================================= -->
+
+      <p
+        id="testimonial-role"
+        class="
+          mt-1
+          font-urbanist
+          text-[14px]
+          text-gold-light
+          sm:text-[15px]
+        "
+      >
+        Client
+      </p>
+
+
+      <!-- ================================================= -->
+      <!-- PAGINATION DOTS -->
+      <!-- ================================================= -->
+<div
+  id="testimonial-dots"
+  class="
+    mt-8
+    flex
+    items-center
+    justify-center
+    gap-3
+  "
+>
+
+  <!-- 1. Michael -->
+  <button
+    type="button"
+    data-dot="0"
+    aria-label="Testimonial 1"
+    class="
+      flex
+      h-6
+      w-6
+      items-center
+      justify-center
+      rounded-full
+      border
+      border-gold
+      transition-colors
+    "
+  >
+    <span
+      class="
+        h-2
+        w-2
+        rounded-full
+        bg-[radial-gradient(50%_261.22%_at_50%_50%,#F6D995_0%,#AB8546_100%)]
+      "
+    ></span>
+  </button>
+
+
+  <!-- 2. James -->
+  <button
+    type="button"
+    data-dot="1"
+    aria-label="Testimonial 2"
+    class="
+      flex
+      h-6
+      w-6
+      items-center
+      justify-center
+      rounded-full
+      border
+      border-transparent
+      transition-colors
+    "
+  >
+    <span
+      class="
+        h-1.5
+        w-1.5
+        rounded-full
+        bg-white/30
+      "
+    ></span>
+  </button>
+
+
+  <!-- 3. Elena -->
+  <button
+    type="button"
+    data-dot="2"
+    aria-label="Testimonial 3"
+    class="
+      flex
+      h-6
+      w-6
+      items-center
+      justify-center
+      rounded-full
+      border
+      border-transparent
+      transition-colors
+    "
+  >
+    <span
+      class="
+        h-1.5
+        w-1.5
+        rounded-full
+        bg-white/30
+      "
+    ></span>
+  </button>
+
+
+  <!-- 4. Daniel -->
+  <button
+    type="button"
+    data-dot="3"
+    aria-label="Testimonial 4"
+    class="
+      flex
+      h-6
+      w-6
+      items-center
+      justify-center
+      rounded-full
+      border
+      border-transparent
+      transition-colors
+    "
+  >
+    <span
+      class="
+        h-1.5
+        w-1.5
+        rounded-full
+        bg-white/30
+      "
+    ></span>
+  </button>
+
+
+  <!-- 5. Sofia -->
+  <button
+    type="button"
+    data-dot="4"
+    aria-label="Testimonial 5"
+    class="
+      flex
+      h-6
+      w-6
+      items-center
+      justify-center
+      rounded-full
+      border
+      border-transparent
+      transition-colors
+    "
+  >
+    <span
+      class="
+        h-1.5
+        w-1.5
+        rounded-full
+        bg-white/30
+      "
+    ></span>
+  </button>
+
+
+  <!-- 6. Marcus -->
+  <button
+    type="button"
+    data-dot="5"
+    aria-label="Testimonial 6"
+    class="
+      flex
+      h-6
+      w-6
+      items-center
+      justify-center
+      rounded-full
+      border
+      border-transparent
+      transition-colors
+    "
+  >
+    <span
+      class="
+        h-1.5
+        w-1.5
+        rounded-full
+        bg-white/30
+      "
+    ></span>
+  </button>
+
+
+  <!-- 7. Priya -->
+  <button
+    type="button"
+    data-dot="6"
+    aria-label="Testimonial 7"
+    class="
+      flex
+      h-6
+      w-6
+      items-center
+      justify-center
+      rounded-full
+      border
+      border-transparent
+      transition-colors
+    "
+  >
+    <span
+      class="
+        h-1.5
+        w-1.5
+        rounded-full
+        bg-white/30
+      "
+    ></span>
+  </button>
+
+</div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- ===================================================== -->
+<!-- ELEVATE — FULLY RESPONSIVE HERO IMAGE                -->
+<!-- Tailwind CSS ONLY                                    -->
+<!-- ===================================================== -->
+
+<div class="relative w-full overflow-hidden bg-[#0D1B16]">
+
+ <!-- ===================================================== -->
+<!-- ELEVATE — RESPONSIVE IMAGE + BUTTON                  -->
+<!-- ===================================================== -->
+
+<div
+  class="
+    relative
+    w-full
+    overflow-hidden
+    flex
+    items-center
+    justify-center
+    bg-[#0D1B16]
+  "
+>
+
+  <!-- IMAGE -->
+
+  <img
+    src="src/assets/images/footer-section.png"
+    alt="ELEVATE fashion look"
+    class="
+      block
+      w-full
+      h-auto
+      max-w-full
+      object-contain
+    "
+  />
+
+
+  <!-- CENTER BUTTON -->
+
+  <a
+    href="https://instagram.com"
+    target="_blank"
+    rel="noopener"
+    class="
+      absolute
+      left-1/2
+      top-1/2
+      z-[10]
+
+      flex
+      items-center
+      justify-center
+      gap-1.5
+
+      -translate-x-1/2
+      -translate-y-1/2
+
+      w-[125px]
+      h-[36px]
+
+      sm:w-[145px]
+      sm:h-[40px]
+
+      md:w-[160px]
+      md:h-[44px]
+
+      lg:w-[180px]
+      lg:h-[50px]
+
+      xl:w-[190px]
+      xl:h-[54px]
+
+      rounded-md
+      lg:rounded-lg
+
+      bg-white
+      text-[#16090D]
+
+      font-[Cormorant]
+      font-semibold
+
+      text-[11px]
+      sm:text-[12px]
+      md:text-[13px]
+      lg:text-[14px]
+      xl:text-[15.5px]
+
+      tracking-[0.01em]
+      whitespace-nowrap
+      no-underline
+
+      shadow-[0_10px_22px_-8px_rgba(0,0,0,0.5)]
+
+      transition-[transform,box-shadow]
+      duration-[250ms]
+      ease-[ease]
+
+      hover:-translate-x-1/2
+      hover:-translate-y-[calc(50%+2px)]
+      hover:shadow-[0_14px_28px_-8px_rgba(0,0,0,0.55)]
+    "
+  >
+
+    <!-- Instagram Icon -->
+
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.8"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="
+        w-[14px]
+        h-[14px]
+
+        sm:w-[15px]
+        sm:h-[15px]
+
+        md:w-[16px]
+        md:h-[16px]
+
+        lg:w-[18px]
+        lg:h-[18px]
+
+        xl:w-[19px]
+        xl:h-[19px]
+
+        shrink-0
+      "
+    >
+      <rect
+        x="3"
+        y="3"
+        width="18"
+        height="18"
+        rx="5"
+        ry="5"
+      ></rect>
+
+      <path
+        d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+      ></path>
+
+      <line
+        x1="17.5"
+        y1="6.5"
+        x2="17.51"
+        y2="6.5"
+      ></line>
+    </svg>
+
+    <span>Follow @ELEVATE</span>
+
+  </a>
+
+</div>
+<!-- ================================================= -->
+<!-- MAIN FOOTER                                       -->
+<!-- FULLY RESPONSIVE — TAILWIND ONLY                  -->
+<!-- ================================================= -->
+
+<footer class="w-full bg-[#141F1A] font-['Urbanist',sans-serif]">
+
+  <!-- ================================================= -->
+  <!-- FOOTER COLUMNS                                    -->
+  <!-- ================================================= -->
+
+  <div
+    class="
+      mx-auto
+      w-full
+      max-w-[1850px]
+
+      px-5
+      sm:px-8
+      lg:px-10
+      xl:px-12
+      2xl:px-14
+
+      pt-12
+      sm:pt-16
+      md:pt-20
+      lg:pt-24
+
+      pb-10
+
+      grid
+      grid-cols-1
+      sm:grid-cols-2
+      lg:grid-cols-5
+
+      gap-x-8
+      md:gap-x-10
+      lg:gap-x-8
+      xl:gap-x-12
+
+      gap-y-12
+      sm:gap-y-14
+      lg:gap-y-0
+
+      text-center
+      sm:text-left
+    "
+  >
+
+    <!-- ============================================= -->
+    <!-- COLUMN 1 — LOGO -->
+    <!-- ============================================= -->
+
+    <div
+      class="
+        flex
+        flex-col
+        items-center
+        sm:items-start
+        justify-start
+        lg:pr-4
+      "
+    >
+
+      <img
+        src="src/assets/images/logo2.png"
+        alt="ELEVATE - Soaring to New Heights"
+        class="
+          w-[160px]
+          sm:w-[175px]
+          md:w-[185px]
+          lg:w-[180px]
+          xl:w-[200px]
+          h-auto
+          max-w-full
+          object-contain
+        "
+      />
+
+    </div>
+
+
+    <!-- ============================================= -->
+    <!-- COLUMN 2 — RECENT POSTS -->
+    <!-- ============================================= -->
+
+    <div class="w-full">
+
+      <h4
+        class="
+          mb-6
+          font-['Cormorant',serif]
+          font-medium
+          text-[24px]
+          sm:text-[26px]
+          lg:text-[28px]
+          text-white
+          leading-none
+        "
+      >
+        Recent Posts
+      </h4>
+
+
+      <div class="flex flex-col gap-5">
+
+
+        <!-- POST 1 -->
+
+        <div
+          class="
+            flex
+            items-center
+            sm:items-start
+            justify-center
+            sm:justify-start
+            gap-3
+          "
+        >
+
+          <div
+            class="
+              w-[52px]
+              h-[52px]
+              sm:w-[56px]
+              sm:h-[56px]
+              lg:w-[58px]
+              lg:h-[58px]
+              rounded-[8px]
+              overflow-hidden
+              shrink-0
+            "
+          >
+            <img
+              src="src/assets/images/post1.jpg"
+              alt="Recent post"
+              class="w-full h-full object-cover block"
+            />
+          </div>
+
+
+          <div class="text-left min-w-0">
+
+            <p
+              class="
+                font-['Urbanist',sans-serif]
+                text-[13px]
+                sm:text-[14px]
+                lg:text-[14.5px]
+                font-light
+                text-[rgba(255,255,255,0.92)]
+                leading-[1.35]
+              "
+            >
+              Sed ut perspiciatis unde<br />
+              iste natus error
+            </p>
+
+            <p
+              class="
+                mt-[6px]
+                font-['Urbanist',sans-serif]
+                text-[10px]
+                sm:text-[11px]
+                text-[rgba(255,255,255,0.4)]
+              "
+            >
+              March 25, 2026
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- POST 2 -->
+
+        <div
+          class="
+            flex
+            items-center
+            sm:items-start
+            justify-center
+            sm:justify-start
+            gap-3
+          "
+        >
+
+          <div
+            class="
+              w-[52px]
+              h-[52px]
+              sm:w-[56px]
+              sm:h-[56px]
+              lg:w-[58px]
+              lg:h-[58px]
+              rounded-[8px]
+              overflow-hidden
+              shrink-0
+            "
+          >
+            <img
+              src="src/assets/images/post2.jpg"
+              alt="Recent post"
+              class="w-full h-full object-cover block"
+            />
+          </div>
+
+
+          <div class="text-left min-w-0">
+
+            <p
+              class="
+                font-['Urbanist',sans-serif]
+                text-[13px]
+                sm:text-[14px]
+                lg:text-[14.5px]
+                font-light
+                text-[rgba(255,255,255,0.92)]
+                leading-[1.35]
+              "
+            >
+              Sed ut perspiciatis unde<br />
+              iste natus error
+            </p>
+
+            <p
+              class="
+                mt-[6px]
+                font-['Urbanist',sans-serif]
+                text-[10px]
+                sm:text-[11px]
+                text-[rgba(255,255,255,0.4)]
+              "
+            >
+              March 25, 2026
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- POST 3 -->
+
+        <div
+          class="
+            flex
+            items-center
+            sm:items-start
+            justify-center
+            sm:justify-start
+            gap-3
+          "
+        >
+
+          <div
+            class="
+              w-[52px]
+              h-[52px]
+              sm:w-[56px]
+              sm:h-[56px]
+              lg:w-[58px]
+              lg:h-[58px]
+              rounded-[8px]
+              overflow-hidden
+              shrink-0
+            "
+          >
+            <img
+              src="src/assets/images/post3.jpg"
+              alt="Recent post"
+              class="w-full h-full object-cover block"
+            />
+          </div>
+
+
+          <div class="text-left min-w-0">
+
+            <p
+              class="
+                font-['Urbanist',sans-serif]
+                text-[13px]
+                sm:text-[14px]
+                lg:text-[14.5px]
+                font-light
+                text-[rgba(255,255,255,0.92)]
+                leading-[1.35]
+              "
+            >
+              Sed ut perspiciatis unde<br />
+              iste natus error
+            </p>
+
+            <p
+              class="
+                mt-[6px]
+                font-['Urbanist',sans-serif]
+                text-[10px]
+                sm:text-[11px]
+                text-[rgba(255,255,255,0.4)]
+              "
+            >
+              March 25, 2026
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ============================================= -->
+    <!-- COLUMN 3 — OUR STORES -->
+    <!-- ============================================= -->
+
+    <div class="w-full">
+
+      <h4
+        class="
+          mb-6
+          font-['Cormorant',serif]
+          font-medium
+          text-[24px]
+          sm:text-[26px]
+          lg:text-[28px]
+          text-white
+          leading-none
+        "
+      >
+        Our Stores
+      </h4>
+
+
+      <ul
+        class="
+          flex
+          flex-col
+          gap-4
+          items-center
+          sm:items-start
+        "
+      >
+
+        <li>
+          <a href="#"
+             class="text-[14px] sm:text-[15px] text-[rgba(255,255,255,0.6)] transition-colors duration-200 hover:text-[#C9A24B] leading-[1.2]">
+            Shop All
+          </a>
+        </li>
+
+        <li>
+          <a href="#"
+             class="text-[14px] sm:text-[15px] text-[rgba(255,255,255,0.6)] transition-colors duration-200 hover:text-[#C9A24B] leading-[1.2]">
+            Men's Collection
+          </a>
+        </li>
+
+        <li>
+          <a href="#"
+             class="text-[14px] sm:text-[15px] text-[rgba(255,255,255,0.6)] transition-colors duration-200 hover:text-[#C9A24B] leading-[1.2]">
+            Women's Collection
+          </a>
+        </li>
+
+        <li>
+          <a href="#"
+             class="text-[14px] sm:text-[15px] text-[rgba(255,255,255,0.6)] transition-colors duration-200 hover:text-[#C9A24B] leading-[1.2]">
+            Accessories
+          </a>
+        </li>
+
+        <li>
+          <a href="#"
+             class="text-[14px] sm:text-[15px] text-[rgba(255,255,255,0.6)] transition-colors duration-200 hover:text-[#C9A24B] leading-[1.2]">
+            New Arrivals
+          </a>
+        </li>
+
+        <li>
+          <a href="#"
+             class="text-[14px] sm:text-[15px] text-[rgba(255,255,255,0.6)] transition-colors duration-200 hover:text-[#C9A24B] leading-[1.2]">
+            My Account
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+
+    <!-- ============================================= -->
+    <!-- COLUMN 4 — USEFUL LINKS -->
+    <!-- ============================================= -->
+
+    <div class="w-full">
+
+      <h4
+        class="
+          mb-6
+          font-['Cormorant',serif]
+          font-medium
+          text-[24px]
+          sm:text-[26px]
+          lg:text-[28px]
+          text-white
+          leading-none
+        "
+      >
+        Useful Links
+      </h4>
+
+
+      <ul
+        class="
+          flex
+          flex-col
+          gap-4
+          items-center
+          sm:items-start
+        "
+      >
+
+        <li>
+          <a href="#" class="text-[14px] sm:text-[15px] text-[rgba(255,255,255,0.6)] transition-colors duration-200 hover:text-[#C9A24B] leading-[1.2]">
+            About Us
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="text-[14px] sm:text-[15px] text-[rgba(255,255,255,0.6)] transition-colors duration-200 hover:text-[#C9A24B] leading-[1.2]">
+            Contact Us
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="text-[14px] sm:text-[15px] text-[rgba(255,255,255,0.6)] transition-colors duration-200 hover:text-[#C9A24B] leading-[1.2]">
+            Size Guide
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="text-[14px] sm:text-[15px] text-[rgba(255,255,255,0.6)] transition-colors duration-200 hover:text-[#C9A24B] leading-[1.2]">
+            Privacy Policy
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="text-[14px] sm:text-[15px] text-[rgba(255,255,255,0.6)] transition-colors duration-200 hover:text-[#C9A24B] leading-[1.2]">
+            Terms &amp; Conditions
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="text-[14px] sm:text-[15px] text-[rgba(255,255,255,0.6)] transition-colors duration-200 hover:text-[#C9A24B] leading-[1.2]">
+            Return &amp; Exchange Policy
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+
+    <!-- ============================================= -->
+    <!-- COLUMN 5 — SUPPORT -->
+    <!-- ============================================= -->
+
+    <div class="w-full">
+
+      <h4
+        class="
+          mb-6
+          font-['Cormorant',serif]
+          font-medium
+          text-[24px]
+          sm:text-[26px]
+          lg:text-[28px]
+          text-white
+          leading-none
+        "
+      >
+        Support
+      </h4>
+
+
+      <ul
+        class="
+          flex
+          flex-col
+          gap-4
+          items-center
+          sm:items-start
+        "
+      >
+
+        <li>
+          <a href="#" class="text-[14px] sm:text-[15px] text-[rgba(255,255,255,0.6)] transition-colors duration-200 hover:text-[#C9A24B] leading-[1.2]">
+            Shipping Information
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="text-[14px] sm:text-[15px] text-[rgba(255,255,255,0.6)] transition-colors duration-200 hover:text-[#C9A24B] leading-[1.2]">
+            Track My Order
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="text-[14px] sm:text-[15px] text-[rgba(255,255,255,0.6)] transition-colors duration-200 hover:text-[#C9A24B] leading-[1.2]">
+            Return &amp; Refund Policy
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="text-[14px] sm:text-[15px] text-[rgba(255,255,255,0.6)] transition-colors duration-200 hover:text-[#C9A24B] leading-[1.2]">
+            FAQs
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="text-[14px] sm:text-[15px] text-[rgba(255,255,255,0.6)] transition-colors duration-200 hover:text-[#C9A24B] leading-[1.2]">
+            Help Center
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="text-[14px] sm:text-[15px] text-[rgba(255,255,255,0.6)] transition-colors duration-200 hover:text-[#C9A24B] leading-[1.2]">
+            Payment Options
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+
+  <!-- ================================================= -->
+  <!-- BOTTOM FOOTER                                     -->
+  <!-- ================================================= -->
+
+  <div
+    class="
+      mx-auto
+      w-full
+      max-w-[1650px]
+      px-5
+      sm:px-8
+      lg:px-10
+      xl:px-12
+    "
+  >
+
+    <!-- DIVIDER -->
+
+    <div class="border-t border-[rgba(255,243,247,0.1)]"></div>
+
+
+    <!-- BOTTOM ROW -->
+
+    <div
+      class="
+        flex
+        flex-col
+        sm:flex-row
+
+        items-center
+        sm:items-center
+
+        justify-between
+
+        gap-5
+        sm:gap-6
+
+        py-6
+        sm:py-7
+
+        text-center
+        sm:text-left
+      "
+    >
+
+      <!-- COPYRIGHT -->
+
+      <p
+        class="
+          max-w-full
+          font-['Urbanist',sans-serif]
+          text-[11px]
+          sm:text-[12px]
+          md:text-[13px]
+          lg:text-[13.5px]
+          leading-[1.5]
+          text-[rgba(255,255,255,0.55)]
+        "
+      >
+        Copyright © 2026
+        <span class="text-[#C9A24B]">Elevate</span>.
+        All Rights Reserved | Design By
+        <span class="text-[#C9A24B]">Bmybrand</span>
+      </p>
+
+
+      <!-- PAYMENT BADGES -->
+
+      <div
+        class="
+          flex
+          items-center
+          justify-center
+          shrink-0
+        "
+      >
+
+        <img
+          src="src/assets/images/footer-card.png"
+          alt="Payment Methods"
+          class="
+            block
+            w-auto
+            h-[20px]
+            sm:h-[22px]
+            md:h-[24px]
+            lg:h-[26px]
+            max-w-full
+            object-contain
+          "
+        />
+
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+  <!-- ===================================================== -->
+  <!-- JAVASCRIPT -->
+  <!-- ===================================================== -->
+ 
+<script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
+ 

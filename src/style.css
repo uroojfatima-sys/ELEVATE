@@ -1,0 +1,201 @@
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #16090D;
+  font-family: 'Cormorant', serif;
+}
+
+
+/* =========================================================
+   GOLD GRADIENT
+========================================================= */
+
+.gold-gradient {
+  background:
+    radial-gradient(
+      50% 261.22% at 50% 50%,
+      #F6D995 0%,
+      #AB8546 100%
+    );
+}
+
+
+/* =========================================================
+   GOLD TEXT
+========================================================= */
+
+.elevate-logo {
+  background:
+    linear-gradient(
+      180deg,
+      #F6D995 0%,
+      #AB8546 100%
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+
+/* =========================================================
+   ANNOUNCEMENT STRIP
+========================================================= */
+
+.top-strip-font {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+/* =========================================================
+   HEADER DIVIDERS
+========================================================= */
+
+.header-divider {
+  border-color: rgba(255, 255, 255, 0.10);
+}
+
+.feature-divider {
+  border-color: rgba(255, 255, 255, 0.10);
+}
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+#mobile-menu {
+  transition:
+    transform 0.35s ease,
+    opacity 0.35s ease;
+}
+
+#mobile-backdrop {
+  transition:
+    opacity 0.35s ease;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+/* =========================================================
+   DESKTOP HEADER
+========================================================= */
+
+@media (min-width: 1024px) {
+
+  .main-header-grid {
+    grid-template-columns: 390px minmax(0, 1fr);
+    grid-template-rows: 68px 48px;
+  }
+
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1400px) {
+
+  .main-header-grid {
+    grid-template-columns: 390px minmax(0, 1fr);
+    grid-template-rows: 68px 48px;
+  }
+
+  .elevate-logo {
+    font-size: 52px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1023px) {
+
+  .main-header-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .desktop-logo {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  .desktop-nav-row {
+    min-height: 64px;
+  }
+
+  .desktop-feature-row {
+    min-height: 50px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+
+  .top-strip-font {
+    font-size: 13px;
+  }
+
+  .top-strip-wrapper {
+    height: 40px;
+  }
+
+  .desktop-logo {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .elevate-logo {
+    font-size: 38px;
+  }
+
+  .logo-tagline {
+    font-size: 9px;
+    letter-spacing: 0.30em;
+  }
+
+}
